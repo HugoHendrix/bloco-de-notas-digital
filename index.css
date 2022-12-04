@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+/* RESET CSS */
+
+* {
+  font-family: 'Archivo', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  padding-bottom: 12rem;
+
+
+}
+
+
+img {
+  max-width: 100%;
+}
+
+/* TEMAS  */
+
+#light,
+:root:has(#light:checked) {
+  --bg-color: #ffffff;
+  --text-color: black;
+  --input-color: gray;
+  --shadow: 2px 2px 2px #969392;
+  --link-color: rgb(4, 52, 104);
+  --btn-text: rgb(2, 1, 1);
+  --btn-back: #dbdbdb;
+  --bg-scrollbar: #8b8b8b;
+  --color-thumb: rgb(255, 255, 255);
+  --input-selection: lightblue;
+  --input-background-selection: black;
+
+  background-image: url(./temas/white.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+
+
+}
+
+#dark,
+:root:has(#dark:checked) {
+  --bg-color: #4c4c4c;
+  --text-color: rgb(0, 0, 0);
+  --input-color: black;
+  --shadow: 2px 2px 2px #100f0f;
+  --link-color: rgb(46, 36, 36);
+  --btn-text: white;
+  --btn-back: #6b5a5a;
+  --bg-scrollbar: #1f1d1e;
+  --color-thumb: rgb(184, 180, 184);
+  --input-selection: lightblue;
+  --input-background-selection: rgb(17, 16, 16);
+  background-image: url("./temas/dark.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+
+}
+
+#blue,
+:root:has(#blue:checked) {
+  --bg-color: #004AAD;
+  --text-color: rgb(1, 68, 88);
+  --input-color: #004aad;
+  --shadow: 2px 2px 2px #283c3b;
+  --link-color: #043468;
+  --btn-text: white;
+  --btn-back: #043468;
+  --bg-scrollbar: #02a2ff;
+  --color-thumb: rgb(0, 89, 255);
+  --input-selection: rgb(255, 255, 255);
+  --input-background-selection: #043468;
+  ;
+
+  background-image: url("./temas/blue.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+
+
+}
+
+#pink,
+:root:has(#pink:checked) {
+  --bg-color: #FF66C4;
+  --text-color: rgb(19, 7, 7);
+  --input-color: #FF66C4;
+  --link-color: rgb(43, 12, 158);
+  --btn-text: white;
+  --btn-back: #6e047c;
+  --bg-scrollbar: #ff0055;
+  --color-thumb: rgb(113, 70, 138);
+  --input-selection: rgb(255, 255, 255);
+  --input-background-selection: #6e047c;
+
+  background-image: url("./temas/pink.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  text-shadow: 1px 1px 1px #b8b3b2;
+
+}
+
+
+.container {
+  /* EFEITO DE VIDRO/GLASS */
+
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  /* FIM  EFEITO DE VIDRO */
+
+  /* CONTAINER TAMANHO */
+  width: 100%;
+  max-width: 90rem;
+  margin: 3rem auto;
+  padding: 1rem;
+
+}
+
+
+h1 {
+  padding: 1rem 2rem;
+  font-size: 5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* UTILIZANDO FLEXBLOX PARA ALINHAR O CNPJ */
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+/* ESTILIZANDO INPUT */
+
+h2>input {
+  background: transparent;
+  color: var(--shadow);
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+h3 {
+  margin: 3rem 2rem;
+  font-size: 3rem;
+}
+
+h4 {
+  margin: 1rem;
+}
+
+textarea {
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  font-size: 1.7rem;
+  font-weight: bold;
+  width: 50%;
+  padding: 0.8rem;
+
+
+
+}
+
+/* ESTILZANDO Os BOTÕES */
+
+.btn-style {
+  padding: 1.3rem;
+  font-size: 1.5rem;
+  border-radius: 0.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid gray;
+  transition: 0.8s ease;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: var(--btn-back);
+  color: var(--btn-text);
+
+
+
+
+}
+
+.btn-style:hover {
+  background-color: var(--btn-back);
+  color: var(--btn-text);
+  text-decoration: underline;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+
+/* ESTILIZANDO LINKS EXTERNOS */
+
+nav {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  transition: 1ms ease;
+  color: var(--link-color);
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* BOTÃO DE VOLTA AO TOPO */
+
+.devolta {
+  float: right;
+  z-index: 2;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  font-size: 2.2rem;
+  border-radius: 0.6rem;
+  padding: 1.8rem;
+  border: 1px solid #ccc;
+  background-color: var(--btn-back);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+}
+
+/* SEÇÃO DE ANOTAÇÕES */
+
+
+input {
+  width: 60%;
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem
+}
+
+input::selection {
+  color: var(--input-selection);
+  background-color: var(--input-background-selection);
+}
+
+
+/* CAIXA PARA ALTERAR O TERMA */
+
+ul {
+  display: flex;
+  /* para alinhar lateralmente*/
+  flex-direction: column;
+  list-style-type: none;
+  /* retirar estilos */
+  gap: 2.5rem;
+  /* espaçamento */
+
+  background: var(--btn-back);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  position: fixed;
+  /* permite que o elemento fique fixo na página,       mesmo dando scroll.*/
+  bottom: 16rem;
+  /*Deixa o elemento na parte inferior da tela*/
+  padding: 1rem;
+  border-radius: 8px;
+  left: 97%;
+  /*Deixa o elemento no meio da tela, mais no inicio da caixa*/
+  transform: translateX(-50%);
+  /*E assim alinha no meio da caixa*/
+  /*Note que bottom e left por exemplos serão liberados somente após definir
+  um posicionamento como fixed*/
+}
+
+/*Estilizando a bolinha do input com essa opção abaixo*/
+input[type="radio"] {
+  appearance: none;
+  border: 2px solid var(--input-color);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+
+}
+
+input[type="radio"]:checked {
+  background-color: var(--input-color);
+
+}
+
+
+
+/* ESTILIZANDO A SCROLL BAR  */
+
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-scrollbar);
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-thumb);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid rgb(44, 43, 42);
+  /* creates padding around scroll thumb */
+}
+
+
+/* ESTILIZANDO SEÇÃO DE PADRÃO DE GRID */
+
+.grid {
+  width: 50%;
+  margin: 1rem auto;
+  margin-bottom: 8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+p {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+/*  ESTILIZANDO SEÇÃO PRF */
+.prf-bg {
+  background-color: #ffc300;
+  background-image:linear-gradient(90deg, #ffc300 0%, #ffd60a 50%, #ffd829 100%);
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+div {
+  text-align: center;
+  padding: 2.5rem;
+
+}
+div img {
+  margin-top: 7rem;
+  margin-inline: auto;
+}
+
+.prf-bg, h1, h2 {
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.prf-nav {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.prf-address { 
+  background: white;
+  width: 80%;
+  margin:3rem auto;
+  padding: 6rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+footer {
+  background-image: radial-gradient(circle at 79% 12%, rgba(252, 252, 252,0.04) 0%, rgba(252, 252, 252,0.04) 50%,rgba(116, 116, 116,0.04) 50%, rgba(116, 116, 116,0.04) 100%),radial-gradient(circle at 98% 39%, rgba(136, 136, 136,0.04) 0%, rgba(136, 136, 136,0.04) 50%,rgba(34, 34, 34,0.04) 50%, rgba(34, 34, 34,0.04) 100%),radial-gradient(circle at 83% 49%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 50%,rgba(56, 56, 56,0.04) 50%, rgba(56, 56, 56,0.04) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 5rem;
+  border-radius: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}

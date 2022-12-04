@@ -1,0 +1,3674 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco de Notas Digital - Gr Trans Sat</title>
+  <link rel="shortcut icon" href="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f5d2-fe0f.svg"
+    type="image/x-icon">
+  <script type="text/javascript" src="./index.js" defer=""></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+
+
+<body>
+
+
+  <header class="container">
+
+    <!-- SEÇÃO DE LINKS  -->
+
+    <nav>
+      <a href="#skype" title="Saudações para o Skype">Skype</a>
+      <a href="#ocorrencia-link" title="Ocorrências Mais Utilizadas">Ocorrências</a>
+      <a href="#desvio-rota" title="Ocorrências Relacionadas ao Desvio de Rota">Desvio de Rota</a>
+      <a href="#padrao-de-grid" title="Padrão de Grid">Padrão de GRID</a>
+      <a href="#prf-unidade" title="PRF UNIDADES OPERACIONAIS">UNIDADES PRF</a>
+      <a href="#links-uteis" title="Links úteis e telefone das tecnologias ">Informações</a>
+    </nav>
+
+    <!-- SEÇÃO CNPJ -->
+
+    <h1 id="#topo">Bloco de Notas Digital</h1>
+    <h2>GR Trans Sat - CNPJ <input id="cnpj" name="cnpj" value="052.02925.0001-39"> <button onclick="cnpj()"
+        class="btn-style">Copiar CNPJ</button></h2>
+    <!-- 
+
+		 Observar o onclick definido no botão
+		 Observer também o ID defindo, será necessário
+		 Chamar pelo nome inserido definido no JS.
+
+ -->
+
+  </header>
+
+  <!-- BOTÃO DE VOLTA AO TOPO -->
+  <a href="#topo"> <button class="devolta btn-style" id="backToTop" title="Voltar ao Topo da Página."> 👆 </button></a>
+
+
+  <main class="container">
+    <!-- SEÇÃO PASSAGEM DE TURNO -->
+    <h3>Passagem de Turno</h3>
+    <details>
+      <summary> Clique aqui... </summary>
+      <textarea name="anotacoes" id="anotacoes" cols="70" rows="12"
+        placeholder="Passagem de turno, aproveite para inserir os detalhes principais. Veículos com escolta, valor da carga alto, veículos com problemas mecânicos, manutenção, desvio ou perca de comunicação."></textarea>
+      <br>
+      <button class="btn-style" onclick="salvar()">Salvar texto</button>
+      <button class="btn-style" onclick="copiar_texto_anotacoes()">Copiar texto</button>
+    </details>
+
+
+
+    <!--  SEÇÃO DAS ANOTAÇÕES -->
+    <!-- vou utilizar "an e números" para abrevir anotações e sguir a ordem de apresentação -->
+    <h3>Insira suas Anotações</h3>
+    <!-- SEÇÃO DE MENSAGENS FREQUENTES -->
+    <details>
+      <summary>Mensagens frequentes</summary>
+
+      <input type="text" name="texto" id="texto" readonly placeholder="Ok liberado!"
+        value="OK LIBERADO! BOA VIAGEM, GR TRANS SAT" />
+      <button class="btn-style" onclick="copiarTexto()">Copiar </button>
+
+      <input type="text" name="normal" id="normal" value="VIAGEM SEGUE NORMAL?">
+      <button class="btn-style" onclick="normal()">Copiar </button>
+
+      <input type="text" name="naorec" id="naorec" value="VIAGEM NAO RECOMENDA, ENTRAR EM CONTATO COM A BASE"
+        value="VIAGEM NAO RECOMENDADA">
+      <button class="btn-style" onclick="naorec()">Copiar </button>
+
+      <input type="text" name="tempo" id="tempo" value="TEMPO DE PARADA EXCEDIDA, INFORME PREVISAO DE REINICIO">
+      <button class="btn-style" onclick="tempo()">Copiar </button>
+
+      <input type="text" name="qual" id="qual" value="QUAL O MOTIVO DA PARADA? VIAGEM SEGUE NORMAL?">
+      <button class="btn-style" onclick="qual()">Copiar </button>
+
+      <input type="text " name="pendente" id="pendente" value="PENDENTE ENVIO DE MACRO">
+      <button class="btn-style" onclick="pendente()">Copiar </button>
+
+    </details>
+
+
+    <!-- ANOTAÇÃO 1 -->
+    <input type="text" name="texto" id="an1" placeholder="Texto exemplo - OK LIBERADO" />
+    <button class="btn-style" onclick="salvar1()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto1()">Copiar</button>
+    <!-- ANOTACÃO 2 -->
+    <input type="text" name="texto" id="an2" placeholder="Exemplo - VIAGEM NÃO RECOMENDADA" />
+    <button class="btn-style" onclick="salvar2()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto2()">Copiar</button>
+    <!--  ANOTAÇÃO 3 -->
+    <input type="text" name="texto" id="an3" placeholder="Exemplo - Entrar em contato com a central" />
+    <button class="btn-style" onclick="salvar3()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto3()">Copiar</button>
+    <!-- ANOTACAO 4 -->
+    <input type="text" name="texto" id="an4" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar4()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto4()">Copiar</button>
+    <!-- ANOTACAO 5 -->
+    <input type="text" name="texto" id="an5" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar5()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto5()">Copiar</button>
+    <!-- ANOTACAO 6 -->
+    <input type="text" name="texto" id="an6" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar6()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto6()">Copiar</button>
+    <!-- ANOTACAO 7 -->
+    <input type="text" name="texto" id="an7" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar7()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto7()">Copiar</button>
+    <!-- ANOTACAO 8 -->
+    <input type="text" name="texto" id="an8" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar8()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto8()">Copiar</button>
+    <!-- ANOTACAO 9 -->
+    <input type="text" name="texto" id="an9" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar9()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto9()">Copiar</button>
+    <!-- ANOTACAO 10 -->
+    <input type="text" name="texto" id="an10" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar10()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto10()">Copiar</button>
+    <!-- ANOTACAO 11 -->
+    <input type="text" name="texto" id="an11" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar11()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto11()">Copiar</button>
+    <!-- ANOTACAO 12 -->
+    <input type="text" name="texto" id="an12" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar12()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto12()">Copiar</button>
+    <!-- ANOTACAO 13 -->
+    <input type="text" name="texto" id="an13" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar13()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto13()">Copiar</button>
+    <!-- ANOTACAO 14 -->
+    <input type="text" name="texto" id="an14" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar14()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto14()">Copiar</button>
+    <!-- ANOTACAO 15 -->
+    <input type="text" name="texto" id="an15" placeholder="Digite alguma coisa" />
+    <button class="btn-style" onclick="salvar15()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto15()">Copiar</button>
+    <br>
+
+
+
+    <!-- SEÇÃO SAUDAÇÃO SKYPE -->
+    <h3 id="skype">Saudações Skype, WhatsApp ou Telegram</h3>
+    <!-- ANOTACAO 16 -->
+    <input type="text" name="texto" id="an16" placeholder="Saudação, operador(a) assumindo o turno das 06h às 18h" />
+    <button class="btn-style" onclick="salvar16()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto16()">Copiar</button>
+    <!-- ANOTACAO 17 -->
+    <input type="text" name="texto" id="an17" placeholder="Operador(a) assumindo o turno das 06h às 18h" />
+    <button class="btn-style" onclick="salvar17()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto17()">Copiar</button>
+    <!-- ANOTACAO 18 -->
+    <input type="text" name="texto" id="an18" placeholder="Saudação, operador(a) assumindo o turno das 06h às 18h" />
+    <button class="btn-style" onclick="salvar18()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto18()">Copiar</button>
+    <!-- ANOTACAO 19 -->
+    <input type="text" name="texto" id="an19" placeholder="Saudação, operador(a) assumindo o turno das 06h às 18h" />
+    <button class="btn-style" onclick="salvar19()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto19()">Copiar</button>
+    <!-- ANOTACAO 20 -->
+    <input type="text" name="texto" id="an20" placeholder="Saudação, operador(a) assumindo o turno das 06h às 18h" />
+    <button class="btn-style" onclick="salvar20()">Salvar </button>
+    <button class="btn-style" onclick="copiarTexto20()">Copiar</button>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- SEÇÃO DE OCORRÊNCIA MAIS UTILIZADAS -->
+    <!-- ANOTACAO 21 -->
+    <h3 id="ocorrencia-link">Ocorrências mais utilizadas</h3>
+    <h4>INICIO DE VIAGEM - SAIU DA ORIGEM SEM MACRO</h4>
+    <input type="text" name="texto" id="an21"
+      value="Informamos que o motorista não está cumprindo o procedimento ao não enviar as mensagens de: início de viagem. Foi possível identificar que o veículo saiu da origem sem informar via macro. Dessa forma os sensores e atuadores ficam desativados. Em caso de SINISTRO a central Trans Sat não será informada via alerta/alarme e os comandos de bloqueio e ativação da sirene não serão enviados automaticamente. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Caso o motorista não consiga proceder com o envio de macros, o mesmo deve entrar em contato com a central e informar a situação. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto21()">Copiar</button>
+
+    <!-- ANOTACAO 22 -->
+
+    <h4>NÃO INFORMA MACRO/PROBLEMA NO BLOQUEIO</h4>
+    <input type="text" name="texto" id="an22"
+      value="Informamos que o motorista não está cumprindo o procedimento de enviar as mensagens. Foi possível identificar que os atuadores/sensores não estão funcionando. O veículo não sofre o efeito dos atuadores de bloqueio/sirene e segue trafegando normalmente. O motorista segue sem enviar macros/contra senha (resposta do VIAGEM SEGUE NORMAL). Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Lembramos que caso ocorra SINISTRO nessa situação os comandos de bloqueio e ativação da sirene não serão efetivos e não será possível IDENTIFICAR SITUAÇÃO DE ROUBO." />
+    <button class="btn-style" onclick="copiarTexto22()">Copiar</button>
+
+    <!-- ANOTACAO 23 -->
+    <h4>PROBLEMA NA SIRENE</h4>
+    <input type="text" name="texto" id="an23"
+      value="Foi possível identificar que o veículo apresenta problema na sirene (não gera alerta audível), o motorista segue trafegando normalmente e não solicitou a desativação da sirene. Recomendamos que o veículo passe por manutenção o mais breve possível." />
+    <button class="btn-style" onclick="copiarTexto23()">Copiar</button>
+
+
+    <!-- ANOTACAO 24 -->
+    <h4>SEM RESPOSTA DE VIAGEM SEGUE NORMAL</h4>
+    <input type="text" name="texto" id="an24"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de contra senha do VIAGEM SEGUE NORMAL. Verificamos que o motorista não responde de imediato a CONTRA SENHA ao ser questionado VIAGEM SEGUE NORMAL. Por favor, solicitamos que o motorista seja instruído do procedimento de enviar a contra senha via mensagem: sempre que o teclado estiver em alarme. O motorista deve responder a CONTRA SENHA ao telefone sempre que for questionado VIAGEM SEGUE NORMAL e não estiver em situação de risco. Em caso de bloqueio do veículo acidental, o mesmo deve enviar a CONTRA SENHA VIA MENSAGEM LIVRE e aguardar o desbloqueio. O canal de mensagem livre é conectado direto ao operador, a contra senha indica para central que esta tudo ok. Dessa forma, os comandos de liberação são enviados rapidamente e com segurança." />
+    <button class="btn-style" onclick="copiarTexto24()">Copiar</button>
+
+    <!-- ANOTACAO 25 -->
+    <h4>Perda de Sinal/Cabeçalho</h4>
+    <input type="text" name="texto" id="an25"
+      value="Verificamos que o rastreador perdeu a comunicação na região de ------------. Foram enviados comandos para forçar a posição e o questionamento VIAGEM SEGUE NORMAL? Não obtivemos respostas. Em contato com senhor ---------------, o mesmo foi questionado (VIAGEM SEGUE NORMAL?) e respondeu conforme o procedimento de segurança." />
+    <button class="btn-style" onclick="copiarTexto25()">Copiar</button>
+
+    <!-- ANOTACAO 26 -->
+    <h4>Bloq ignição CHAVE LIGADA</h4>
+    <input type="text" name="texto" id="an26"
+      value="Informamos que o motorista do veículo realizou o procedimento incorreto ao ligar a ignição do veículo com macro indevida, devido a isso, foi gerado bloqueio no veículo. Após o motorista ser questionado (VIAGEM SEGUE NORMAL?) e responder corretamente a contra senha, o veículo foi liberado." />
+    <button class="btn-style" onclick="copiarTexto26()">Copiar</button>
+
+    <!-- ANOTACAO 27 -->
+    <h4>Bloq ignição CHAVE DESLIGADA </h4>
+    <input type="text" name="texto" id="an27"
+      value="Informamos que o motorista do veículo realizou o procedimento incorreto ao desligar a ignição do veículo com macro indevida, devido a isso, foi gerado bloqueio no veículo. O motorista foi questionado (VIAGEM SEGUE NORMAL?) e após responder conforme o procedimento a contra senha, o veículo foi liberado." />
+    <button class="btn-style" onclick="copiarTexto27()">Copiar</button>
+
+    <!-- ANOTACAO 28 -->
+    <h4>Bloq ignição CHAVE DESLIGADA </h4>
+    <input type="text" name="texto" id="an28"
+      value="Informamos que o motorista do veículo realizou o procedimento incorreto ao desligar a ignição do veículo com macro indevida, devido a isso, foi gerado bloqueio no veículo. O motorista foi questionado (VIAGEM SEGUE NORMAL?) e após responder conforme o procedimento a contra senha, o veículo foi liberado." />
+    <button class="btn-style" onclick="copiarTexto28()">Copiar</button>
+
+    <!-- ANOTACAO 29 -->
+    <h4>PQP (Por que parou?)</h4>
+    <input type="text" name="texto" id="an29"
+      value="Verificamos que o motorista informou a PARADA e não informou o motivo ou preencheu de forma inválida. Solicitamos que o motorista seja instruído a sempre informar o motivo da parada. Caso não identificar o motivo pré definido, o motorista deve informar via mensagem livre o motivo da parada. Dessa forma o monitoramento fica mais efetivo." />
+    <button class="btn-style" onclick="copiarTexto29()">Copiar</button>
+
+    <!-- ANOTACAO 30 -->
+    <h4>Parada para higiene em local indevido</h4>
+    <input type="text" name="texto" id="an30"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de: PARADAS, o motorista está realizando paradas no acostamento para higiene pessoal. Solicitamos que o mesmo seja orientado da extrema importância das regras de segurança. Desta forma evitando possíveis transtornos.                 Local:" />
+    <button class="btn-style" onclick="copiarTexto30()">Copiar</button>
+
+    <!-- ANOTACAO 31 -->
+    <h4>PARADA 200KM </h4>
+    <input type="text" name="texto" id="an31"
+      value="Informo que o veículo efetuou parada indevida antes dos 200 km rodados. O procedimento efetuado pelo motorista gera riscos para carga e veículo. Solicitamos que o mesmo seja orientado a não realizar paradas antes dos 200 km rodados, por medidas de segurança." />
+    <button class="btn-style" onclick="copiarTexto31()">Copiar</button>
+
+    <!-- ANOTACAO 32 -->
+    <h4>TRAFEGANDO COM A MACRO DE CHEGADA </h4>
+    <input type="text" name="texto" id="an32"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de: REINICIO DE VIAGEM, o mesmo informa a macro de CHEGADA NO CLIENTE e segue trafegando com a mesma, lembrando que essa macro deve ser usado somente no cliente. Em caso de SINISTRO onde ocorra a violação dos sensores, a central Trans Sat não é informada via alerta/alarme e os comandos de bloqueio e ativação da sirene não são enviados automaticamente. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto32()">Copiar</button>
+
+    <!-- ANOTACAO 33 -->
+    <h4>Trafegando com descarga ou Manobra (D2, JMC, TRANSNOVA)</h4>
+    <input type="text" name="texto" id="an33"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de: REINICIO DE VIAGEM, o mesmo informa a macro de DESCARGA NO CLIENTE e segue trafegando com a mesma, lembrando que essa macro deve ser usado somente no cliente. Em caso de SINISTRO onde ocorra a violação dos sensores, a central Trans Sat não é informada via alerta/alarme e os comandos de bloqueio e ativação da sirene não são enviados automaticamente. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto33()">Copiar</button>
+
+    <!-- ANOTACAO 34 -->
+    <h4>CHEGADA SEM PREENCHER</h4>
+    <input type="text" name="texto" id="an34"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de: CHEGADA, é enviado a macro sem o devido preenchimento dos campos. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto34()">Copiar</button>
+
+    <!-- ANOTACAO 35 -->
+    <h4>CHEGADA NO CLIENTE NO POSTO DE COMBUSTIVEL </h4>
+    <input type="text" name="texto" id="an35"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de: CHEGADA, é enviado a macro sem o devido preenchimento dos campos. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto35()">Copiar</button>
+
+    <!-- ANOTACAO 36 -->
+    <h4>PENDENTE MACRO DE FIM DE VIAGEM </h4>
+    <input type="text" name="texto" id="an36"
+      value="Informamos que o motorista não está cumprindo o procedimento ao não enviar as mensagens de: FIM DE VIAGEM. O mesmo segue realizando movimentação sem desativar o rastreador, podendo gerar violações de sensores e o bloqueio do veículo sem necessidade. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto36()">Copiar</button>
+
+    <!-- ANOTACAO 37 -->
+    <h4>FIM DE VIAGEM SEM CONCLUIR AS ENTREGAS </h4>
+    <input type="text" name="texto" id="an37"
+      value="Informamos que o motorista não está cumprindo o procedimento ao enviar a mensagem de: FIM DE VIAGEM. Foi possível identificar que o motorista desativou o rastreador informando FIM DE VIAGEM, sem concluir as entregas descritas na Solicitação de Monitoramento. Devido a isso, o veículo foi bloqueado e o motorista orientado a ativar novamente o rastreador. Solicitamos que o mesmo seja orientado sobre os procedimentos de segurança e da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento. Desta forma podemos agir com rapidez e eficácia evitando possíveis transtornos." />
+    <button class="btn-style" onclick="copiarTexto37()">Copiar</button>
+
+    <!-- ANOTACAO 38 -->
+    <h4>MOTORISTA SEM TREINAMENTO PARA MANUSEAR O TECLADO</h4>
+    <input type="text" name="texto" id="an38"
+      value="Na condição de Gerenciadora de Risco não recomendamos a viagem deste veículo, o motorista embarcado não tem experiência em manusear o equipamento. Sendo assim o mesmo está gerando bloqueio e violações de forma desnecessária, orientamos que o motorista seja instruído a como manusear o equipamento antes que, seja liberado novamente para viagens. Não descartamos a hipótese de que, ocorra violações de sensores em áreas de sombra (sem sinal) e nessas ocasiões,  o ideal é que o motorista embarcado saiba manusear o equipamento. Caso o contrário pode haver dificuldade na liberação do veículo gerando atrasos e transtornos." />
+    <button class="btn-style" onclick="copiarTexto38()">Copiar</button>
+    <br>
+    <br>
+    <br>
+    <!-- SEÇÃO DE OCORRÊNCIA PARA SM  -->
+    <h3>Ocorrências relacionadas a SM</h3>
+    <h4>CHEGADA NO CLIENTE EM LOCAL NÃO INFORMADA NA SM.</h4>
+    <!-- ANOTACAO 39 -->
+    <input type="text" name="texto" id="an39"
+      value="Verificamos que o motorista informou macro de CHEGADA NO CLIENTE em:    ___              Não foi informado esse local na solicitação de monitoramento.  Solicitamos que essas informações sejam previamente descritas na solicitação, dessa forma o monitoramento fica mais efetivo." />
+    <button class="btn-style" onclick="copiarTexto39()">Copiar</button>
+
+    <!-- ANOTACAO 40 -->
+    <h4>SM sem endereço do destino</h4>
+    <input type="text" name="texto" id="an40"
+      value="Verificamos que não é informado na solicitação de monitoramento o endereço do destino. Solicitamos que essa informação seja previamente descrita na solicitação, dessa forma o monitoramento fica mais efetivo." />
+    <button class="btn-style" onclick="copiarTexto40()">Copiar</button>
+
+    <!-- ANOTACAO 41 -->
+    <h4>Várias entregas em locais não informado na SM</h4>
+    <input type="text" name="texto" id="an41"
+      value="Verificamos que o veículo segue realizando entregas em vários locais, porém nenhum dos locais foi informado na solicitação de monitoramento. Solicitamos que essas informações sejam previamente descritas na solicitação, dessa forma o monitoramento fica mais efetivo." />
+    <button class="btn-style" onclick="copiarTexto41()">Copiar</button>
+
+    <h3>Problemas nos atuadores (bloqueio, sirene e travas)</h3>
+
+    <!-- ANOTACAO 42 -->
+    <h4>Porta direita + problema bloqueio/sirene</h4>
+    <input type="text" name="texto" id="an42"
+      value="Devido ao procedimento incorreto de abertura de porta direita, o veículo foi bloqueado e a sirene foi ativada. Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de contra senha do VIAGEM SEGUE NORMAL. Lembramos que com a contra senha de segurança, indica para central que esta tudo ok, dessa forma os comandos de liberação são enviados rapidamente. Qualquer resposta sem ser a contra senha de segurança, indica situação de roubo, abordagem, perseguição ou coação com arma branca, ou de fogo. Foi possível identificar que os atuadores/sensores não estão funcionando. Sendo assim o veículo não sofre o efeito dos atuadores de bloqueio/sirene e consegue trafegar normalmente. O motorista segue sem enviar macros/contra senha de segurança. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento." />
+    <button class="btn-style" onclick="copiarTexto42()">Copiar</button>
+
+    <!-- ANOTACAO 43 -->
+    <h4>Porta Esquerda + problema bloqueio/sirene </h4>
+    <input type="text" name="texto" id="an43"
+      value="Devido ao procedimento incorreto de abertura de porta esquerda, o veículo foi bloqueado e a sirene foi ativada. Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de contra senha do VIAGEM SEGUE NORMAL. Lembramos que com a contra senha de segurança, indica para central que esta tudo ok, dessa forma os comandos de liberação são enviados rapidamente. Qualquer resposta sem ser a contra senha de segurança, indica situação de roubo, abordagem, perseguição ou coação com arma branca, ou de fogo. Foi possível identificar que os atuadores/sensores não estão funcionando. Sendo assim o veículo não sofre o efeito dos atuadores de bloqueio/sirene e consegue trafegar normalmente. O motorista segue sem enviar macros/contra senha de segurança. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento." />
+    <button class="btn-style" onclick="copiarTexto43()">Copiar</button>
+
+    <!-- ANOTACAO 44 -->
+    <h4>Violação de baú (ticar sensor traseiro ou lateral)</h4>
+    <input type="text" name="texto" id="an44"
+      value="Devido o procedimento incorreto de abertura de baú ()traseiro ()lateral, o veículo foi bloqueado e a sirene foi acionada. Informamos que o motorista não está cumprindo o procedimento ao enviar as mensagens de contra senha do VIAGEM SEGUE NORMAL? Lembramos que com a contra senha de segurança correta, indica para central que esta tudo ok, dessa forma os comandos de liberação são enviados rapidamente. Qualquer resposta sem ser a contra senha de segurança, indica situação de roubo, abordagem, perseguição ou coação com arma branca, ou de fogo. Foi possível identificar que os atuadores/sensores não estão funcionando. Sendo assim o veículo não sofre o efeito dos atuadores de bloqueio/sirene e consegue trafegar normalmente. O motorista segue sem enviar macros/contra senha de segurança. Solicitamos que o mesmo seja orientado da extrema importância na comunicação efetiva entre o veículo e a central de monitoramento." />
+    <button class="btn-style" onclick="copiarTexto44()">Copiar</button>
+
+    <!-- ANOTACAO 45 -->
+    <h4>Problema no botão de pânico </h4>
+    <input type="text" name="texto" id="an45"
+      value="Na condição de Gerenciadora de Risco, não é recomendado a viagem deste veículo. Verificamos que o veículo encontra-se com problema no botão de pânico, assim o mesmo vem gerando alerta sem ser acionado, isso complica em nosso rastreamento com preocupação de pânico acionado indevidamente, gerando assim uma preocupação indesejada. Orientamos que seja realizado o contato com a central da SASCAR para abertura de ordem de serviço e agendamento de visita técnica. SASCAR: 4002-6004 (grandes capitais) 0800-648-6004 (demais regiões) 0800-648-6003 (INFORMAR SINISTRO)." />
+    <button class="btn-style" onclick="copiarTexto45()">Copiar</button>
+
+    <!-- SEÇÃO DE DESVIO DE ROTA  -->
+
+    <h3 id="desvio-rota">Ocorrências relacionadas a DESVIO DE ROTA</h3>
+    <!-- ANOTACAO 46 -->
+    <h4>Cabeçalho Desvio de Rota</h4>
+    <input type="text" name="texto" id="an46"
+      value="Durante a viagem do veículo foi identificado um desvio de rota. Em contato com o senhor -------, o mesmo foi questionado (VIAGEM SEGUE NORMAL?) e respondeu conforme a senha de segurança. Veículo deveria seguir por  --------. Esta seguindo por  ------------. Peço por favor que a situação seja verificada." />
+    <button class="btn-style" onclick="copiarTexto46()">Copiar</button>
+
+    <!-- ANOTACAO 47 -->
+
+
+    <h4>Motorista Alega que não é desvio </h4>
+    <input type="text" name="texto" id="an47"
+      value="Durante a viagem do veículo foi identificado um desvio de rota. Em contato com o senhor -------, o mesmo foi questionado (VIAGEM SEGUE NORMAL?) e respondeu conforme a senha de segurança. O motorista alegou que não está realizando desvio. Solicitamos que a rota informada seja verificada, para não ocorrer cobranças indevidas. Veículo deveria seguir por  --------. Esta seguindo por  ------------. Peço por favor que a situação seja verificada." />
+    <button class="btn-style" onclick="copiarTexto47()">Copiar</button>
+
+
+
+    <!-- ANOTACAO 48 -->
+
+
+    <h4>Desvio de rota em local informado na SM </h4>
+    <input type="text" name="texto" id="an48"
+      value="Embora em nossa ferramenta esteja gerando o desvio de rota, verificamos que o veículo se encontra em um cliente informado na solicitação de monitoramento. Solicitamos que a rota informada seja verificada, para evitar transtornos e que o motorista seja cobrado indevidamente." />
+    <button class="btn-style" onclick="copiarTexto48()">Copiar</button>
+
+  </main>
+
+  <section class="container grid">
+    <h2 id="padrao-de-grid">Padrão de GRID</h2>
+    <p>= Veículo parado</p>
+    <p><strong>PT VB</strong> - Veículo em pernoite.</p>
+
+    <p><strong>CAR</strong> - Veículos carregados.</p>
+
+    <p><strong>CCAR</strong> - Veículos carregado acompanhando</p>
+
+    <p><strong>FV AD</strong> - Veículos aguardando descarregamento.</p>
+
+    <p><strong>FV AC </strong>- Veículos aguardando carregamento.</p>
+
+    <p><strong>ENT</strong> -Veículos em entregas.</p>
+
+    <p><strong>P/???</strong> - Veículos parados em casa, filial, manutenção. etc (Autotrac)</p>
+
+    <p><strong>IV AG </strong>- Inicio de viagem.</p>
+
+    <p><strong>QVZ</strong> - Veículo vazio, não pode se movimentar sem informar ou sem autorização.</p>
+
+    <p><strong>CVZ</strong> - Veícuos vazios monitorado.</p>
+
+    <p><strong>CCVZ</strong> - Veículo vazio, apenas acompanhando.</p>
+
+    <p><strong>VZ</strong> - Veículo vazio, não monitora.</p>
+
+    <p>=<strong>PPF</strong> - Parada posto Fiscal</p>
+
+    <p>=<strong>P.ABAST</strong> = Parada referente a abastecimento.</p>
+
+    <p>=<strong>PPM</strong> = Parada para manutenção mecânica.</p>
+
+    <p>=<strong>PME</strong> = Veículo parado em manutenção elétrica.</p>
+
+    <p>=<strong>PCF</strong> - Veículo parada café</p>
+
+    <p>=<strong>PHP</strong> - Veículo parado para higiene</p>
+
+    <p>=<strong>ACID</strong> - Veículo envolvido em acidente</p>
+
+    <p>=<strong>PTI</strong> - Parada devido ao trânsito ou via estar interrompido.</p>
+
+    <p><strong>=PROB MEC</strong> - Veículo parado devido a problema mecânico.</p>
+
+    <p>=<strong>VSN</strong> - Viagem segue normal?</p>
+
+    <p>=<strong>ROUBO</strong> - Veículo roubado.</p>
+
+    <p>=<strong>PPOL</strong> - Veículo abordado pelo polícia.</p>
+
+    <p>=<strong>PBAL</strong> - Veículo parado na balança.</p>
+
+    <p>=<strong>OF</strong> - Ocorrência Feita.</p>
+
+    <h2>Alteração de Cadastro Omnilink</h2>
+
+    <p>.(Ponto) - Veículo carregado.</p>
+
+    <p>@(Arroba) - Veículo vazio.</p>
+
+    <p>(Espaço + número) - Escolta e temperatura.</p>
+
+    <p>Z - Outra GR</p>
+
+    <p>/ - Veículo realizando entregas FVAD</p>
+
+    <p>\ - Veículo realizando coletas.</p>
+
+    <p>_ (UNDERLINE) - PTVB - Pernoite</p>
+
+    <p>0 - (zero) - Aguardando início de viagem.</p>
+
+    <p>(número ex 01,02 ) - Veículo AIV com escolta de acordo com o número de comboio.</p>
+
+  </section>
+
+  <!-- SEÇÃO UNIDADES DA PRF -->
+
+  <section class="prf-bg">
+    <div id="prf-unidade"> <img src="https://hugohendrix.github.io/prf-unidades/prf-header.png"> </div>
+    <h1 >Unidades operacionais da PRF</h1>
+    <h2>Estados</h2>
+    <nav class="prf-nav">
+      <a href="#acre">Acre</a>
+      <a href="#alagoas">Alagoas</a>
+      <a href="#amapa">Amapá</a>
+      <a href="#amazonas">Amazonas</a>
+      <a href="#bahia">Bahia</a>
+      <a href="#ceara">Ceará</a>
+      <a href="#distrito-federal">Distrito Federal</a>
+      <a href="#espirito-santo">Espírito Santo</a>
+      <a href="#goias">Goiás</a>
+      <a href="#maranhao">Maranhão</a>
+      <a href="#mato-grosso">Mato Grosso</a>
+      <a href="#mato-grosso-do-sul">Mato Grosso do Sul</a>
+      <a href="#minas-gerais">Minas Gerais</a>
+      <a href="#para">Pará</a>
+      <a href="#paraiba">Paraíba</a>
+      <a href="#parana">Paraná</a>
+      <a href="#pernambuco">Pernambuco</a>
+      <a href="#piaui">Piauí</a>
+      <a href="#rio-de-janeiro">Rio de Janeiro</a>
+      <a href="#rio-grande-do-norte">Rio Grande do Norte</a>
+      <a href="#rio-grande-do-sul">Rio Grande do Sul</a>
+      <a href="#rondonia">Rondônia</a>
+      <a href="#roraima">Roraima</a>
+      <a href="#santa-catarina">Santa Catarina</a>
+      <a href="#sao-paulo">São Paulo</a>
+      <a href="#sergipe">Sergipe</a>
+      <a href="#tocantins">Tocantins</a>
+    </nav>
+    <section class="prf-address"> 
+      <section id="acre">
+        <h1 class="estados">Acre</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2> <br>
+          Endereço: Av. Epaminondas Jácome, Nº 3017 - Centro , Rio Branco / AC , CEP 69900-050 <br>
+          <mark class="telefone">Telefone: (68) 3212-5300 </mark><br>
+          E-mail: protocolo.ac@prf.gov.br <br>
+          Atendimento: 7h30 às 16h30 de segunda a sexta-feira <br>
+          <a href="https://goo.gl/maps/6YXVUVMFCS4u11qY9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+            <h2 class="prf">PRF Rio Branco</h2>
+            Endereço: BR 364, Km 115, Bairro Santa Cecília, Rio Branco/AC - 69908-100 <br>
+            <mark>Telefone: (68) 3212-0100</mark> <br>
+            <mark>Telefone: (68) 3248-6230</mark> <br>
+            E-mail: del01.ac@prf.gov.br <br>
+            Email: del05p01.ac@prf.gov.br <br>
+            Atendimento: 7h00 às 16h00 de segunda a sexta-feira <br>
+            <a href="https://goo.gl/maps/cVevoxtxFY91wi488" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+            <h2 class="prf">PRF Xapuri</h2>
+            Endereço: BR 317, km 237 Xapuri/AC - 69930-000 <br>
+            <mark>Telefone: (68) 3212-5320</mark> <br>
+            Email: del05p02.ac@prf.gov.br <br>
+            <a href="https://goo.gl/maps/yQ2W5Uab4ZcRoyDC6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+    </section>
+  
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <section id="alagoas">
+        <h1 class="estados">Alagoas</h1>
+        <address>
+            <h2 class="prf">Superintendência</h2>
+              Endereço: Avenida Doutor Durval de Góes Monteiro, 2882 - A, Maceió/AL - CEP: 57.081-285 <br>
+              <mark>Telefone: (82) 3214-4100</mark> <br>
+              Email: atendimento.al@prf.gov.br <br>
+              <a href="https://goo.gl/maps/bVsPpxZiSbtgXXNZ7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF Rio Largo</h2>
+          Endereço: BR 101, KM 77, Município de Rio Largo/AL. CEP: 57.100-000 <br>
+          <mark>Telefones: (82) 3214-4110</mark> <br>
+          Email: del01.al@prf.gov.br. <br>
+          <a href="https://goo.gl/maps/WAo3R3rreQafujxP8"target="_blank">Clique aqui para ver no mapa</a
+              >
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF Palmeira dos Índios</h2>
+          Endereço: BR 316, KM 151, Município de Palmeira dos ìndios/AL, CEP: 57607-665 <br>
+          <mark>Telefones: (82) 3214-4130</mark> <br>
+          Email: del03.al@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Foq9E1h16LyVPZLP9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF São Miguel dos Campos</h2>
+          Endereço: BR 101, KM 139, Município de São Miguel dos Campos/AL, CEP: 57246-370  <br>
+          <mark>Telefones: (82) 3214-4120</mark>  <br>
+          Email: del02.al@prf.gov.br <br>
+          <a href="https://goo.gl/maps/oJFKcscKJzyrPg1m7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF União dos Palmares</h2>
+          Endereço: BR 104, km 36, União dos Palmares/AL. <br>
+          <mark>Telefone: (82) 3214-4113</mark> <br> 
+          <mark>(82) 98108-3207</mark> <br>
+          Email: del01p02.al@prf.gov.br <br>
+          <a href="https://goo.gl/maps/TX9rH6jWDkN79ons8"target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF São Sebastião (Atende Lagoa Seca,  Salomé, Cedro e Cabo do Pasto).</h2>
+          
+          Rod. Gov. Mário Covas, São Sebastião - AL, 57275-000 <br>
+          <mark>Telefone: (82) 3214-4122</mark> <br> <mark>(82) 98121-7209</mark> <br>
+          Email: del02p02.al@prf.gov.br <br>
+          <a href="https://goo.gl/maps/V5Gc7yyyPdRx1TWQ7"target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+          <address>
+              <h2 class="prf">PRF Canapi</h2>
+             
+              Endereço:BR-423, km 26, povoado Carié, Canapi - AL, 57530-000 <br>
+              Telefone: (82)3646-6010 <br>
+              <mark>(82) 3214-4132</mark> <br>
+              <mark>(82) 98103-5307</mark> <br>
+              <mark>(82) 98171-5810</mark> <br>
+              Email: del03p02.al@prf.gov.br <br>
+              <a href="https://goo.gl/maps/5x2Y3cX6inT9RYfK8"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+       </section>
+       <br>
+       <br>
+       <hr>
+       <hr>
+       <br>
+       <br>
+       <section id="amapa"> 
+           <h1 class="estados">Amapá</h1>
+           <address>
+               <h2 class="prf">Superintendência</h2>
+               Endereço: Rua Tancredo Neves, 201, São Lázaro, Macapá/AP - 68908-900 <br>
+              <mark>Telefone: (96) 3225-9000</mark> <br>
+              Email: atendimento.ap@prf.gov.br <br>
+              Atendimento: das 8h às 17h, de segunda à sexta-feira. <br>
+              <a href="https://goo.gl/maps/SFR3BWNfupfct41Z8"target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+              <h2 class="prf">Instituto Federal Macapá</h2>
+              
+              Endereço: Rodovia BR-210, Km 03, S/n - Brasil Novo, AP, 68909-398 <br>
+              <mark>Telefones: (96) 3225-9011</mark> <br> <mark>(96)3222-7626</mark> <br> <mark>(96)3198-2150</mark> <br>
+              Email: del01.ap@prf.gov.br <br>
+              Email: dst04p01.ap@prf.gov.br <br>
+              Atendimento: das 8h às 17h, de segunda à sexta-feira <br>
+              <a href="https://goo.gl/maps/6mjKHD67aa5gqoTX7" target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+  
+              <address>
+                  <h2 class="prf">PRF Oiapoque</h2>
+                  Endereço: BR 156 Oiapoque/AP - 68980-000 <br>
+                  <mark>Telefone: (96)3225-9000</mark> <br>
+                  Email: dst04p03.ap@prf.gov.br <br>
+                  <a href="https://goo.gl/maps/2H1wEUvdMGdK6hYJA"target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+  
+              <address>
+                  <h2 class="prf">Delegacia Tartarugalzinho</h2>
+                  
+                  Endereço: Rua Nossa Senhora do Perpétuo Socorro, nº 770, Centro <br>
+                  Delegado Responsável: Felipe Santos Vieira Nogueira <br>
+                  <mark>Telefone: (96) 3422-1133</mark> <br> <mark>Telefone: (96)3422-1234</mark>
+                  Email: dst04p02.ap@prf.gov.br <br>
+                  <a href="https://goo.gl/maps/YDeZ7pd8QPRS6M3y6"target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+       </section>
+  
+       <br>
+       <br>
+       <hr>
+       <hr>
+       <br>
+       <br>
+  
+       <section id="amazonas">
+           <h1 class="estados">Amazonas</h1>
+           <address>
+             <h2 class="prf">Superintendência</h2>
+              Av. Domingos Jorge Velho, 40 - Dom Pedro, Manaus - AM, 69042-470 <br>
+              <mark>Telefone: (92)3655-1515</mark> <br> <mark>(92) 2129-0570 </mark>
+              E-mail: sprf.am@prf.gov.br <br>
+              Atendimento: das 7h30 às 17h de segunda a sexta-feira <br>
+              <a href="https://goo.gl/maps/qzXkAyB3jKFcH6Wv7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+             <h2 class="prf"> PRF/AM - POSTO CEASA</h2>
+             Estrada Porto Velho, 1892-1930 - Vila Buriti, Manaus - AM <br>
+             <mark>Telefone: (92) 981421760</mark> <br>
+             <a href="https://goo.gl/maps/mtK2sg7etR6qX3Jn9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Careiro da Várzea</h2>
+            Endereço: BR 319,Km 013 Careiro da Várzea/AM - 69255- 000 <br>
+            <mark>Telefones: (92) 21290599</mark> <br> <mark>(92) 981421760</mark> <br>
+            E-mail: del01.am@prf.gov.br <br>
+            <a href="https://goo.gl/maps/UsNXTuvFkTwF1MPW6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Presidente Figueiredo</h2>
+            Endereço: BR174, KM990 Presidente Figueiredo/AM - 69735-000 <br>
+            <mark>Telefones: (92) 21290599</mark> <br> <mark>(92) 981421760</mark>
+            E-mail: del01.am@prf.gov.br <br>
+            <a href="https://goo.gl/maps/aUWDs63uzBDxdRfz6"target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Humaitá</h2>
+            Endereço: BR 319, Km 678, Humaitá/AM, CEP 69800-000 <br>
+            <mark>Telefone: (69) 3211-7888 <br> (62) 3211-7800 <br> </mark>
+            E-mail: del01.ro@prf.gov.br <br>
+            <a href="https://goo.gl/maps/cuEK5jTJhdjBh2Nu6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+   
+       </section>
+  
+       <br>
+       <br>
+       <hr>
+       <hr>
+       <br>
+       <br>
+  
+       <section id="bahia">
+         <h1 class="estados">Bahia</h1>
+         <address>
+           <h2 class="prf">Superintendência</h2>
+            R. da Indonésia, Nº 500 - Granjas Rurais Pres. Vargas, Salvador - BA <br>
+            <mark>Telefone: (71) 2101-2201</mark> <br>
+            E-mail: sup.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/i1NyjHKVgZtFG8fH7" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+  
+         <address>
+          <h2 class="prf">PRF Simões Filho</h2>
+          Endereço: BR 324,Km 604 - Simões Filho/BA - 43700-000 <br>
+          <mark>Telefone: (71) 2101-2260</mark> <br>
+          <mark>(71) 2101-2261</mark> <br>
+          <mark>(71) 98120-0435</mark> <br>
+          <mark>(71) 3296-8610</mark> <br>
+          E-mail: del01.ba@prf.gov.br <br>
+          del01p01.ba@prf.gov.br <br>
+          <a href="https://goo.gl/maps/5hqmvq4k9h86YHQD6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+          <address>
+            <h2 class="prf">PRF Alagoinhas</h2>
+            Endereço: Rodovia Governador Mario Covas, Alagoinhas/BA - 48100-000 <br>
+            <mark>Telefones: (71) 2101-2264</mark> <br> <mark>(75) 98291-5620</mark> <br> <mark>(75) 3431-5392</mark> <br>
+            Email: del01p04.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/5mDnWygiDueSdvhy6"target="_blank">Clique aqui para ver no mapa</a>
+  
+          </address>
+          <address>
+            <h2 class="prf">PRF Humildes</h2>
+            Endereço: BR 101, Km 173 Feira de Santana/BA <br>
+            <mark>Telefones: (71) 2101-2263</mark> <br> <mark>(71) 2101-2262</mark> <br> <mark>(75) 98291-5615</mark> <br>
+            Email: del01p03.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/LqT3PMFmQ9EFQ32V8"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            
+              <h2 class="prf">PRF Santo Antônio de Jesus</h2>
+              Endereço: BR 101,Km 265 Santo Antonio de Jesus/BA - 44570-000  <br>
+              <mark>Telefones: (71) 2101-2262</mark> <br> <mark>(75) 98291-5605 </mark><br>
+              Email: del01p02.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/Qvu5i9bZG5AR1D276"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Feira de Santana</h2>
+           
+            Endereço: BR 116, Km 429 - Feira de Santana/BA - 44100-000 <br>
+            <mark>Telefone: (71) 2101-2265</mark> <br> <mark>(71) 2101-2266 </mark><br> <mark>(75) 98291-5602</mark> <br> <mark>(75) 3221-1866 </mark><br>
+            E-mail: del02.ba@prf.gov.br <br> del02p01.ba@prf.gov.br <br>
+            Atendimento de segunda a sexta-feira das 08h às 17h <br>
+            <a href="https://goo.gl/maps/qPEqsLSnmN9aWmPy9"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Jequié</h2>
+  
+            Endereço: BR 116,Km 677 - Jequié/BA - 45200-000 <br>
+            <mark>Telefone: (71) 2101-2268</mark> <br> <mark>(71) 2101-2269</mark> <br> <mark>(73) 98175-0127 </mark><br> <mark>(73) 3525-3000</mark> <br> <mark>(73) 3525-0191 </mark><br>
+            E-mail: del03.ba@prf.gov.br <br> del03p01.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ytx5h4t8trDFvtDX8"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Milagres</h2>
+            Endereço: BR 116,Km 544 Milagres/BA <br>
+            <mark>Telefones: (71) 2101-2270</mark> <br> <mark>(75) 98291-4426</mark> <br> <mark>(75) 3545-2142</mark> <br>
+            Email: del03p02.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/7AyU9CTRHr5L4cnN9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Senhor do Bonfim</h2>
+            
+            Endereço: BR 407,Km 117 Senhor do Bonfim/BA - 48970-000 <br>
+            <mark>Telefones: (71) 2101-2272 </mark><br><mark> (74) 98105-1427</mark> <br> <mark>(71) 2101-2271</mark> <br> <mark>(74) 3544-2079</mark> <br>
+            Email: del04p01.ba@prf.gov.br <br> del04.ba@prf.gov.br 
+            <a href="https://goo.gl/maps/Jq6TTdAUvjgADxyq9"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Capim Grosso</h2>
+            
+            Endereço: BR 324,Km 356 Capim Grosso/BA <br>
+            <mark>Telefones: (71) 2101-2273</mark> <br> <mark>(74) 98105-1546</mark> <br>
+            Email: del04p02.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/TgRoV65EV4HcrMJo9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Itabuna</h2>
+            
+            Endereço: BR 101, Km 503 - Itabuna/BA <br>
+            <mark>Telefone: (71) 2101-2274 <br> (71) 2101-2275 <br> (73) 98175-1014 <br></mark>
+            Email: del05p01.ba@prf.gov.br <br> del05.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/yaYUXYNFeGydDu1NA"target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF Camaçã</h2>
+            
+            Endereço: BR 101, Km 594 Camacan/BA - 45880-000 <br>
+            <mark>Telefones: (71) 2101-2277 <br> (73) 98175-1044   <br></mark>
+            Email: del05p02.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/5QEXhHbmvFEmc3Vf7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf"> PRF Gandu</h2>
+  
+            Endereço: BR 101,Km 370 Gandu/BA - 45450-000 <br>
+            <mark>Telefones: (71) 2101-2278 <br> (73) 98175-1068 <br></mark>
+            Email: del05p03.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/qaVnVwVrprFxw7jg7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+          <address>
+            <h2 class="prf">PRF Seabra</h2>
+  
+            Endereço: BR 242,Km 408,6 - Seabra/BA - 46900-000 <br>
+            <mark>Telefone: (71) 2101-2279 <br> (71) 2101-2280 <br> (75) 98291-4509 <br> (75) 3331-2324 <br></mark>
+            E-mail: del06.ba@prf.gov.br <br> del06p01.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/GZUtmFdPUcyAyPNe8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Paulo Afonso</h2>
+    
+            Endereço: BR 110,Km 002 - Paulo Afonso/BA - 48600-000 <br>
+            <mark>Telefone: (71) 2101-2284 <br> (71) 2101-2285 <br> (75) 98291-4532</mark> <br>
+            E-mail: del07.ba@prf.gov.br <br> del07p01.ba@prf.gov.br <br>
+            Atendimento de segunda a sexta-feira das 08h às 17h <br>
+            <a href="https://goo.gl/maps/v9fG2CkSZoJEEzD29" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF Ribeira do Pombal</h2>
+           
+            Endereço: BR 110,Km 170 Ribeira do Pombal/BA <br>
+            <mark>Telefones: (71) 2101-2286 <br> (75) 98291-4542 <br></mark> 
+            Email: del07p02.ba@prf.gov.br <br>
+            <a href="https://goo.gl/maps/BJQytRMadguVBzWX6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+            <address>
+              <h2 class="prf">PRF Vitória da Conquista</h2>
+        
+              Endereço:  BR 116,Km 830 - Vitória da Conquista/BA - 45025-710 <br>
+              <mark>Telefone: (71) 2101-2287 <br> (71) 2101-2288 <br> (77) 98145-8357 <br></mark>
+              E-mail: del08.ba@prf.gov.br <br>
+              Email: del08p01.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/4ytCtvYe6jB8Gahy6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+  
+            <address>
+              <h2 class="prf">PRF Encruzilhada (Divisa BA/MG)</h2>
+              Endereço: BR 116, Km 932 - Encruzilhada/BA <br>
+              <mark>Telefones: (71) 2101-2290 <br> (31) 97129-7657 <br></mark>
+              Email: del08p03.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/y32db8Re9aC3kp8S6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+             <address>
+              <h2 class="prf">PRF Poções</h2>
+    
+              Endereço: Rodovia BR116, Km 760,3. Poções/BA. CEP 45260-000 <br> 
+              <mark>Telefones: (71) 2101-2289 <br> (77) 98145-8374 <br></mark>
+              Email: del08p02.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/i383zpV7nYemz7AF9" target="_blank">Clique aqui para ver no mapa</a>
+             </address>
+             <address>
+              <h2 class="prf">PRF Eunápolis</h2>
+              Endereço: BR 101, Km 720 - Eunápolis/BA - 45820-000 <br>
+              <mark>Telefone: (71) 2101-2291 <br> (71) 2101-2292 <br> (73) 98175-2839 <br> (73) 3281-2800 <br></mark>
+              E-mail: del09.ba@prf.gov.br <br> del09p01.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/R6GEcUXhKm8jRfQV6" target="_blank">Clique aqui para ver no mapa</a>
+             </address>
+              
+             <address>
+              <h2 class="prf">PRF Teixeira de Freitas</h2>
+              Endereço: BR 101,Km 880 Teixeira de Freitas/BA <br>
+              <mark>Telefones: (71) 2101-2294 <br> (73) 98175-4438 <br></mark>
+              Email: del09p02.ba@prf.gov.br <br>
+             </address>
+  
+             <address>
+              <h2 class="prf">PRF Barreiras</h2>
+          
+              Endereço:  BR 242, Km 801 - Barreiras/BA - 47800-000 <br>
+              <mark>Telefone: (71) 2101-2296 <br> (71) 2101-2297 <br> (77) 98145-9413 <br></mark>
+              E-mail: del10.ba@prf.gov.br / del10p01.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/mfDFwqsVk1zV21VJ8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+  
+            <address>
+              <h2 class="prf">PRF Ibotirama</h2>
+              Endereço: BR 24 2,Km 582 Ibotirama/BA <br>
+              <mark>Telefones: (71) 2101-2282 <br> (77) 98145-8350 <br></mark>
+              Email: del10p02.ba@prf.gov.br <br>
+              <a href="https://goo.gl/maps/mK4M7pHtDEi6mefb9" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+       </section>
+  
+       <br>
+       <br>
+       <hr>
+       <hr>
+       <br>
+       <br>
+  
+        <section id="ceara">
+           <h1 class="estados">Ceará</h1>
+           <address>
+            <h2 class="prf">Superintendência</h2>                 
+            BR-116, 2100 - Cajazeiras, Fortaleza - CE, 60.864 <br>
+            <mark>Telefone: (85) 3474-6700 </mark> <br> 
+            <a href="https://goo.gl/maps/CCDRsj5kRJsbRvjJ9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Caucaia</h2>
+            Endereço: BR 222,Km 011 Caucaia/CE - 61634-900 <br>
+            <mark>Telefone: (85) 3474-6773 <br> (85) 3474-6771  <br></mark>
+            Email: del01p01.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/yEceqGTyihTRdgga7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Canindé</h2>
+            Endereço:BR 020,Km 310 Canindé/CE - 62700-970 <br>
+            <mark>Telefone: (85) 3474-6778 </mark><br> Email: del02p01.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/6Kx5Anvrj9pGw7gU7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Boa Viagem</h2>
+            Endereço: BR 020,Km 208 Boa Viagem/CE - 63870-970 <br>
+            <mark>Telefone: (85) 3474-6779 </mark><br>
+            Email: del02p02.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/VDEjghC2mngkXXxc6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Russas</h2>
+            Endereço: BR- 116 km 159 Russas/CE /62.900-000 <br>
+            <mark>Telefone: (85) 3474-6783 <br> (85) 3295-3022 <br></mark>
+            Email: del03p01.ce@prf.gov.br <br> 
+            <a href="https://goo.gl/maps/dd5cvfLHnaWxKz6Q9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Chorozinho</h2>                 
+            Endereço: BR 116,Km 070 Chorozinho/CE - 62875-000 <br>
+            <mark>Telefone: (85) 3474-6784</mark> <br>
+            Email: del03p02.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/vqRBYRAMD1DXSzV8A" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Aracati</h2>
+            Endereço: BR 304,Km 053 Aracati/CE - 62800-000 <br> 
+            <mark>Telefone: (85) 3474-6785</mark> <br>
+            Email: del03p03.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/e585fkMUFPXZcvXU6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Sobral</h2>
+            Endereço: BR 222, km 221 -  Sobral/CE - 62050-100 <br> 
+            <mark>Telefone: (85) 3474-6788</mark> <br> Email: del04p01.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/TRMmZMNHDsAsfoLb9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Tianguá</h2>
+            Endereço: BR 222,Km 307 Tianguá/CE - 62320-970 <br>
+            <mark>Telefone: (85) 3474-6789 </mark><br> Email: del04p02.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/xRTheER8wd34ELXo6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Irauçuba</h2>
+            Endereço: BR 222,Km 150 Irauçuba-CE - 62620-970 <br>
+            <mark>Telefone: (85) 3474-6790 <br></mark> Email: del04p03.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ZxK2oJK3iDz6zWXT7" target="_blank">Clique aqui</a>
+           </address>
+            <address>
+                   <h2 class="prf">PRF Icó</h2>
+                  Endereço:  BR 116,Km 383, Icó/CE - 63430-970 <br>
+                  <mark>Telefone: (85) 3474-6793</mark> <br> Email: del05p01.ce@prf.gov.br <br>
+                  <a href="https://goo.gl/maps/YuDxySRWZuPEtcyK8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+          <address>
+            <h2 class="prf">PRF Jaguaribe</h2>
+            Endereço: BR 116,Km 303 Jaguaribe/CE - 63475-970 <br>
+            <mark>Telefone: (85) 3474-6794</mark> <br> Email: del05p02.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/xBAvUaPUBPk1QsgBA" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Milagres</h2>
+            Endereço: BR 116,Km 478 Milagres/CE - 63250-970 <br>
+            <mark>Telefone: (85) 3474-6795</mark> <br> Email: del05p03.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ER8QPgE69KiN3THk8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Eusébio</h2>
+            Endereço: BR 116,Km 19 Eusébio/CE - 61760-000 <br>
+            <mark>Telefone: (85) 3474-6774</mark> <br> Email: del01.ce@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Sb4m9aMjpR4bsd9SA" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <br>
+          <br>
+          <hr>
+          <hr>
+          <br>
+          <br>
+        </section>
+        <section id="distrito-federal">
+          <h1 class="estados">Distrito Federal</h1>
+          <address>
+            <h2 class="prf">Superintendência Regional da Polícia Rodoviária Federal DF</h2>
+            Endereço: SIA Trecho 2/3, Lotes 2005/2015, Zona Industrial do Guará, Brasília-DF, CEP 71.200-029 <br>
+            <mark>Telefone: (61) 3395-9300 <br> (61) 2025-6820 <br></mark>
+            <a href="https://goo.gl/maps/GyBDxUDuYQYNMKNU9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Santa Maria</h2>
+            Endereço: BR 040, Km 0, Santa Maria/DF, CEP 72.549-650 <br>
+            <mark>Telefone: (61) 3395-9310 <br></mark>
+            E-mail: del01.df@prf.gov.br <br>
+            <a href="https://goo.gl/maps/m1kSZiEdchT25TtZA" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Recanto das Emas</h2>
+            Endereço: BR 060, Km 13 Recanto das Emas/DF Cep: 72.668-000 <br>
+            <mark>Telefone: (61) 3395-9320 <br></mark>
+            <a href="https://goo.gl/maps/gY4GCBTqCw4BeDKN6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Ceilândia</h2>
+            Endereço: BR 070, Km 17 Ceilândia/DF Cep 72.276-010 <br>
+            <mark>Telefone: (61) 3395-9322 <br></mark>
+            <a href="https://goo.gl/maps/TJoWU6McZJraP2ep6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Cristalina</h2>
+            Endereço: BR 040, Km 87 Cristalina/GO Cep 73.850-000 <br>
+            <mark>Telefone: (61) 3395-9312 <br></mark>
+            <a href="https://goo.gl/maps/LQoqKrh9Q1STwRxy7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Planaltina</h2>
+            Endereço: BR 020, Km 37,  Planaltina/DF, CEP 73.391-730 <br>
+            <mark>Telefone: (61) 3395-9330 <br></mark>
+            E-mail: del02.df@prf.gov.br <br>
+            <a href="https://goo.gl/maps/urymHgQ41JDjtBxB7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          
+          <address>
+             
+          <h2 class="prf">PRF Alvorada do Norte</h2>
+          Endereço: BR 020, Km 174 Alvorada do Norte/GO Cep 73.950-000 <br>
+          <mark>Telefone: (62) 3429-0002 <br></mark>
+          Email: aop03.p02.df@prf.gov.br <br>
+          <a href="https://goo.gl/maps/qesboUXrUvkuov779" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+        </section>
+        
+        <br>
+        <br>
+        <hr>
+        <hr>
+        <br>
+        <br>
+  
+  
+  
+        <section id="espirito-santo">
+          <h1 class="estados">Espírito Santo</h1>
+          <address>
+            <h2 class="prf">Superintendência no Espírito Santo</h2>
+            Endereço: Rua Governador José Sette n°176, Edifício Juparanã, Centro,Vitória-ES CEP: 29010-480 <br>
+            <mark>Telefone: (27) 3212-6900 <br></mark>
+            E-mail: gab.es@prf.gov.br <br>
+            Atendimento: 08h00 às 11h30 e 13h00 às 16h30 de segunda a sexta-feira <br>
+            <a href="https://goo.gl/maps/MSJfZgCQeYw3JcLq5" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF VIANA</h2>
+            Endereço: Rodovia BR-262, Km 15, s/n - Ribeira, Viana - ES, 29135-000 <br>
+            <mark>Telefone: (27) 3212-6982 <br>  (27) 3212-6980 <br></mark>
+            E-mail: del01.es@prf.gov.br <br>
+            <a href="https://goo.gl/maps/hE8ka7iY8GJnovJT8" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Ibatiba</h2>
+            Endereço: BR 262,Km 159 Ibatiba/ES - 29395-000 <br>
+            <mark>Telefone: (28) 3212-6981 <br></mark>
+            Email: del01p02.es@prf.gov.br <br>
+            <a href="https://goo.gl/maps/khfGiY6WgUjHGevF7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Serra</h2>
+            Endereço: BR 101 - KM 251 (BAIRRO BELVEDERE) <br>
+            <mark>Telefones: (27) 3212-6985 <br>  (27) 3212-6988 <br></mark>
+            E-mail: del02.es@prf.gov.br <br>
+            <a href="https://goo.gl/maps/TmFVPtRT5HDF4HEH9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+            <address>
+              <h2 class="prf">PRF Guarapari</h2>
+              Endereço: BR 101 - KM 345 (BAIRRO JAQUEIRA) <br>
+              <mark>Telefones: (27) 2112-6992 <br> (27) 3212-6991 <br></mark>
+              E-mail: del03.es@prf.gov.br <br> del03p01.es@prf.gov.br <br>
+              <a href="https://goo.gl/maps/UasstaWsUETHskXR6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Itapemirim</h2>
+              Endereço: BR 101,Km 411 Itapemirim/ES - 29300-970 <br>
+              <mark>Telefone: (27) 3212-6990 <br></mark>
+              Email: del03p02.es@prf.gov.br <br>
+              <a href="https://goo.gl/maps/dqbifsBBQqMi5tcJ6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+  
+            <address>
+              <h2 class="prf">PRF Linhares</h2>
+              Endereço: BR 101,Km 151 Linhares/ES <br>
+              <mark>Telefone: (27) 3212-6999 <br></mark>
+              Email: del04p01.es@prf.gov.br <br>
+              <a href="https://goo.gl/maps/mnrNrX1ws7AyNW7c7" target="_blank">Clique aqui para ver no mapa</a>
+  
+            </address>
+  
+            <address>
+              <h2 class="prf">PRF São Mateus</h2>
+              Endereço: BR 101,Km 056,5 São Mateus/ES - 29930-000 <br>
+              <mark>Telefone: (27) 3212-6998 <br></mark>
+              Email: del04p02.es@prf.gov.br <br>
+              <a href="https://goo.gl/maps/wXJ6ju9mAuuBjcde6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+        </section>
+        <br>
+        <br>
+        <hr>
+        <hr>
+        <br>
+        <br>
+        <section id="goias">
+          <h1 class="estados">Goiás</h1>
+          <address>
+            <h2 class="prf">Superintendência</h2>
+            Endereço: Rua P-23A, Lote 4, S/N - Goiânia/GO - 74543-380 <br>
+            <mark>Telefones: 62 3216-8800 (whatsapp) <br> 62 3216-8844 (atendimento) <br></mark>
+            Email: atendimento.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/vrDLE2oV1X6vBKF99" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Goiânia</h2>
+            Endereço: BR 060,Km 131,8 - 74675-000 <br>
+            <mark>Telefone:(62) 3216-8858 <br></mark>
+            E-mail: del01p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Np7rhPxQxNxAUxcw5" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Hidrolândia</h2>
+            Endereço: BR 153,Km 525 - 75340-000 <br>
+            <mark>Telefone(62) 3216-8898 <br></mark>
+            E-mail: del01p03.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/rqqFoUewsFHRF8PF9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Abadia de Goiás</h2>
+            Endereço: BR 060,Km 184 74640010 <br>
+            <mark>Telefone: (62) 3216-8893 <br></mark>
+            E-mail: del01p02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/x5MA4tog2yfmbQvq9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Anápolis</h2>
+            Endereço: BR 060, Km 85,9 - CEP 75149-899 <br>
+            <mark>Telefones: (62) 3216-8881 <br></mark>
+            Email: del02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/wMXG91Ysfe1dK3AL6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+  
+          <address>
+            <h2 class="prf">PRF Jaraguá</h2>
+            Endereço: BR 153,Km 362,2 - 76330-000 <br>
+            <mark>Telefone: (62) 3216-8883 <br></mark>
+            E-mail: del02p02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/w8Wut486kzAF11C5A" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Morrinhos</h2>
+            Endereço: BR 153,Km 610 - 74548-338 <br>
+            <mark>Telefones: (62) 3216-8885 <br></mark>
+            Email: del03.go@prf.gov.br <br> del03p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/3RRCd1ky3efjxm2B9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Itumbiara</h2>
+            Endereço: BR 153,Km 688,6 - 75500-000 <br>
+            <mark>Telefone: (62) 3216-8886 <br></mark>
+            E-mail: del03p02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/geyqjoJZMo278U6a6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Rio Verde</h2>
+            Endereço: BR 060, Km 390 - 75900-000 <br>
+            <mark>Telefones: (62) 3216-8887 <br> (62) 3216-8888 <br> (62) 3622-2007 <br></mark>
+            Email: del04.go@prf.gov.br <br> del04p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/bWc73Ah8szmj57YZ7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Jataí</h2>
+            Endereço:  BR 364, Km 192 - 75801-615 <br>
+            <mark>Telefones: (62) 3216-8890 <br> (62) 3216-8891 <br></mark>
+            Email: del05.go@prf.gov.br <br> del05p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ZvnUimfGPAFJNgr38" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF São Simão</h2>
+            Endereço: BR 364,Km 012 - 75890-000 <br>
+            <mark>Telefone: (64)99655-3087 <br> (62) 3216-8892 <br></mark>
+            E-mail: del05p02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/BSUdSMjNcYCczYKd6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Catalão</h2>
+            Endereço: BR 050, Km 286 S/N caixa postal 001, cep: 75701-970 - Catalão <br>
+            <mark>Telefones: (62) 3216-8894 (whatsapp) <br>  (62) 3216-8895 <br></mark>
+            Email: del06.go@prf.gov.br / del06p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/TGGRWP9cJ3MVXvRQ7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Porangatu</h2>
+            Endereço: BR 153,Km 067,3 Porangatu/GO - 76550-000 <br>
+            <mark>Telefones: (62) 3216-8896 <br></mark>
+            Email: del07.go@prf.gov.br <br> del07p01.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/xacJ53G9Fqqgn7aB8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <h2 class="prf">PRF Uruaçu</h2>
+          <address>
+            Endereço: BR 153,Km 194 Uruaçu/GO - 76400-000 <br>
+            <mark>Telefone: (62)3216-8808 <br> (62) 3216-8897 <br></mark>
+            Email: del07p02.go@prf.gov.br <br>
+            <a href="https://goo.gl/maps/qMsXe6iGJtC2FoFG7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Santa Rita</h2>
+            Endereço: Rod. Juscelino Kubitscheck Santa Rita do Araguaia - GO <br>
+            <mark>Telefone: (64) 3635-1048 <br></mark>
+            <a href="https://goo.gl/maps/Q7CMFPTDSmTJaSc68" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+        </section>
+        <br>
+        <br>
+        <hr>
+        <hr>
+        <br>
+        <br>
+        <section id="maranhao">
+          <h1 class="estados">Maranhão</h1>
+          <address>
+            <h2 class="prf">Superintendência</h2>
+            Endereço: BR 135,Km 002, Nº 1800, São Luís/MA - 65090-000 <br>
+            <mark>Telefone: (98) 3244-5370 <br> (98) 3244-5390 <br></mark>
+            <a href="https://goo.gl/maps/59nYTKg2hQKujt448" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Açailândia</h2>
+            Endereço: BR 222,Km 670 Açailândia/MA - 65930-000 <br>
+            <mark>Telefone: (98) 3211-5410 <br></mark>
+            Email: del04p03.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Nqm5wLCeqLG45C7j7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Balsas</h2>
+            Endereço: BR 230,Km 404, S/Nº Balsas/MA - 65800-000 <br>
+            <mark>Telefone: (98) 3211-5413 <br></mark>
+            Email: del05p01.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/m2soSkx2gEckxofk7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Caxias</h2>
+            Endereço: BR 316, Km 542 Caxias/MA - 65605-395 <br>
+            <mark>Telefone: (98) 3211-5406 <br></mark>
+            Email: del03p02.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/nRFQtaimcB2HMmTe8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Imperatriz</h2>
+            Endereço: BR 010,Km 260 Imperatriz/MA - 65909-497 <br>
+            <mark>Telefone: (98) 3211-5409 <br></mark>
+            Email: del04p01.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/XJbDUpu7zTGZ99gd6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Itapecuru Mirim</h2>
+            Endereço: BR 135,Km 085 Itapecuru Mirim/MA - 65485-000 <br>
+            <mark>Telefone: (98) 3244-5397 <br></mark>
+            Email: del01p02.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/7tUQsdZ8FknFm2gz7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Nova Olinda do Maranhão</h2>
+            Endereço: BR 316,Km 156 Nova Olinda do Maranhão/MA - 65274-000 <br>
+            <mark>Telefone: (98) 3211-5404 <br> (98) 9 8415 - 2348 <br></mark>
+            Email: del02p03.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/XSiyZ3tDLAHp8L2NA" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Peritoró</h2>
+            Endereço: BR 316,Km 422 Peritoró/MA - 65418-000 <br>
+            <mark>Telefone: (98) 3211-5407 <br></mark>
+            Email: del03p01.ma@prf.gov.br <br>
+            <a href="https://goo.gl/maps/54y1rN6WXP5tudLV9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Porto Franco</h2>
+          Endereço: BR 010,Km 156 Porto Franco/MA - 65970-000 BR <br>
+          <mark>Telefone: (98) 3211-5411 <br></mark>
+          Email: del04p02.ma@prf.gov.br <br>
+          <a href="https://goo.gl/maps/8sMfR1ruad7WYJsKA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Santa Inês</h2>
+          Endereço: BR 316,Km 264 Santa Inês - 65300-000 <br>
+          <mark>Telefone: (98) 3211-5402 <br></mark>
+          Email: del02p02.ma@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Pq7GgH2JGCkuHDSb6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="mato-grosso">
+        <h1 class="estados">Mato Grosso</h1>
+        <address>
+          <h2 class="prf">Superintendência Regional PRF/MT</h2>
+          Endereço: Avenida Joaquim Martinho, 1400, Cuiabá/MT - CEP 78020-290 <br>
+          <mark>Telefone: (65) 3928-3000 <br></mark>
+          <a href="https://goo.gl/maps/D67cPQmJ4HSikKHB6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Rondonópolis</h2>
+        Endereço: BR 364, Km 211, Rondonópolis/MT <br>
+        <mark>Telefones: (65) 3928-3074 <br>  (65) 3928-3075 <br> (66) 3421-1444 <br></mark>
+        Email: del02p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/8wuVHmMbYvhcrUPN6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Alto Garças</h2>
+        Endereço: BR 364,Km 048 Alta Garças/MT - 78000-000 <br>
+        <mark>Telefone: (65) 3928-3078 <br> (65) 3471-1563 <br></mark>
+        Email: del02p04.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ucBgGVd4qrfMng1F7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Cáceres</h2>
+        Endereço: BR 070, Km 741, Cáceres/MT <br>
+        <mark>Telefones: (65) 3928-3077 <br> (65) 3928-3079 <br>  </mark>
+        Email: del03p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/BrD5XdCxFKHZjGpQ8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Poconé</h2>
+        Endereço: BR 070, Km 635, Poconé/MT - 78000-000 <br>
+        <mark>Telefone: (65) 3928-3081 <br></mark>
+        Email: del03p02.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/BskE6TAaEawb31qf9" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Diamantino</h2>
+        Endereço: BR 364, Km 587, Diamantino/MT <br>
+        <mark>Telefones: (65) 3928-3082 <br>  (65) 3928 3083 <br> (65) 3336-2111 <br></mark>
+        Email: del04p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/wKMq3gqn6gby8RWHA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Santo Antônio do Leverger</h2>
+        Endereço: BR 364, Km 387, Santo Antonio do Leverger/MT - 78180-000 <br>
+        <mark>Telefone: (65) 3928-3088 <br> (65) 3928-3000 <br></mark>
+        Email: del01p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/idZ1fUZE7Wz4xq52A" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+  
+       <address>
+        <h2 class="prf">PRF Primavera do Leste</h2>
+        Endereço: BR 070, Km 287, Primavera do Leste/MT <br>
+        <mark>Telefones: (65) 3928-3086 <br> (65) 3928-3087 <br></mark>
+        Email: del05.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/jywfFP11g8sPQ3if6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Campo Verde</h2>
+        Endereço: BR 364, Km 318, Campo Verde/MT - 78000-000 <br>
+        <mark>Telefone: (65) 3987-3073 <br> (65) 3419-2140 <br></mark>
+        Email: del05p02.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ustA69K7Jh9kLNb38" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Sorriso</h2>
+        Endereço: BR 163, Km 733, Sorriso/MT <br>
+        <mark>
+          Telefones: (65) 3987-3089 <br>  (65) 3987-3092 <br> (66) 99202-4014
+           <br> (66) 3705-1000 <br>
+        </mark>
+        Email: del06p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/s63QhAaVqAWkNt6x8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+  
+       <address>
+        <h2 class="prf">PRF Pontes e Lacerda</h2>
+        Endereço: BR 174, Km 294, Pontes e Lacerda/MT <br>
+        <mark>Telefones: (65) 3928-3094 <br> (65) 3928-3095 <br></mark>
+        Email: del07p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/Ax9uA4uQWtsrbXmRA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+  
+       <address>
+        <h2 class="prf">PRF Barra do Garças</h2>
+        Endereço: BR 158, Km 789, Barra do Garças/MT <br>
+        <mark>Telefones: (65) 3928-3096 <br> (65) 3928-3097 <br></mark>
+        Email: del08p01.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/VSNF32uK7u5HFWSx8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Água Boa</h2>
+        Endereço: BR 158,Km 569 Água Boa/MT - 78000-000 <br>
+        <mark>Telefone: (65) 3928 - 3098 <br> (66) 3468-1400 <br></mark>
+        Email: del08p02.mt@prf.gov.br <br>
+        <a href="https://goo.gl/maps/uihAUggez44aMDrY8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="mato-grosso-do-sul">
+        <h1 class="estados">Mato Grosso do Sul</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Rua Joel Dibo, 238 - Campo Grande/MS - CEP: 79002-060 <br>
+          <mark>Telefone: (67) 3320-3600 <br></mark>
+          Email: Atendimentos Gerais - protocolo.ms@prf.gov.br <br>
+          Atendimentos Gabinete - gab.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/fmZohn9T4xgicbfx8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Campo Grande</h2>
+          Endereço: BR 163 - Km 454,7 Campo Grande/MS - 79100-000 <br>
+          <mark>Telefone: (67) 3320-3640 <br> (67) 3393-4975 <br></mark>
+          Email: del01p01.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/x8N4eQDP9FLVZ6kU6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Jaraguari</h2>
+          Endereço: BR 163 - Km 530,5 - Jaraguari/MS <br>
+          <mark>Telefone: (67) 3320- 3641 <br> (67) 3285-1016 <br></mark>
+          Email: del01p02.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/nsucqqAkb1QMrgen7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+         <address>
+          <h2 class="prf">PRF Terenos</h2>
+          Endereço: BR 262 - Km 383,8 - Terenos/MS <br>
+          <mark>Telefone: (67) 3320- 3642 <br></mark>
+          Email: del01p03.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/ZU3JPky9Y1bsxUVu8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Sidrolândia</h2>
+          Endereço: BR 060 - Km 416 - Sidrolândia/MS <br>
+          <mark>Telefone: (67) 3320- 3643 <br></mark>
+          Email: del01p04.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/tLSct82oMq9xyGvD9" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Nova Alvorada do Sul</h2>
+          Endereço: BR 267 - Km 241 <br>
+          <mark>Telefones: (67) 3320-3778 <br>  (67) 3320-3644 <br> (67) 3456-1676 <br></mark>
+          Email: del02.ms@prf.gov.br <br> del02p01.ms@prf.gov.br <br>
+          <a href="https://goo.gl/maps/VPBVLmrNMgJBAaXq8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+          <address>
+            <h2 class="prf">PRF Rio Brilhante</h2>
+            Endereço: BR 163 - Km 324 - Rio Brilhante/MS <br> 
+            <mark>Telefone: (67) 3320-3645 <br> (67) 3320-3445 <br></mark>
+            Email: del02p02.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/QUQCsD9cZHuz8TnQ8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">3º PEL/2ª CIA/14º BPM (Entre Nova Andradina e Batayporã)</h2>
+            Endereço: BR 267 - Km 130 - Nova Andradina/MS - 79750-000 <br>
+            <mark>Telefone: (67) 3320-3766 <br> (67) 3441-8571 <br></mark>
+            Email: del07p02.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/5vUCv2JN8GJk5PLY6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Bataguassu</h2>
+            Endereço: BR 267 - Km 019 - Bataguassu/MS - 79780-000 <br>
+            <mark>Telefone: (67) 3320-3765 <br> (67) 3541-9305 <br></mark>
+            Email: del07p01.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/RSPqubyxRmmWD4Dk9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF Corumbá</h2>
+            Endereço: BR 262 - Km 780,2 <br>
+            <mark>Telefones: (67) 3320-3655 <br> (67)3232-2963 <br></mark>
+            Email: del03.ms@prf.gov.br <br> del03p03.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/8tBQ5n65x5pG9kNY6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Anastácio</h2>
+            Endereço: BR 419 - Km 260 - Anastácio/MS <br>
+            <mark>Telefone: (67) 3320- 3646 <br></mark>
+            Email: del03p01.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/5hCR8i8sfs4gFFsr7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Miranda</h2>
+            Endereço: BR 262 - Km 600 - Miranda/MS <br>
+            <mark>Telefone: (67) 3320-3647 <br> (67) 3242-5009 <br></mark>
+            Email: del03p02.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/yjs9U5VjRspZUQiA7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Dourados</h2>
+            Endereço: BR 163 - Km 267,6 <br>
+            <mark>Telefones: (67) 3320-3636 <br></mark>
+            Email: del04.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Je12JzFVf7uDk2xT9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Caarapó</h2>
+            Endereço: BR 163 - Km 216 - Caarapó/MS - 79940-000 <br>
+            <mark>Telefone: (67) 3320-3760 <br></mark>
+            Email: del04p02.ms@prf.gov.br <br>
+            <a href="https://goo.gl/maps/4L3ohL8Re8yepsh1A" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+  
+            <address>
+              <h2 class="prf">PRF Ponta Porã</h2>
+              Endereço: BR 463,Km 067 Ponta Porã/MS - 79900-000 <br>
+              <mark>Telefone: (67) 3431-0030 <br> (67) 3431-0030 <br></mark>
+              Email: del04p03.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/8YVHaXcWWcEZQ8HY8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Guia Lopes da Laguna</h2>
+              Endereço: BR 267 - Km 474 <br>
+              <mark>Telefones: (67) 3320-3657 <br> (67) 3320-3762 <br></mark>
+              Email: del05p01.ms@prf.gov.br <br> del05.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/yUikQAPxvZgFvWmw6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Coxim</h2>
+              Endereço: BR 163 - Km 734,5 <br>
+              <mark>Telefones: (67) 3320-3676 <br> (67) 3320-3766 <br></mark>
+              Email: del06p01.ms@prf.gov.br <br> del06.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/nkNsZADnvmJdJHpy7" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF São Gabriel do Oeste</h2>
+              Endereço: BR 163 - Km 612 - São Gabriel do Oeste/MS - 79490-000 <br>
+              <mark>Telefone: (67) 3320-3764 <br></mark>
+              Email: del06p02.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/f5Pu2n6rB7gQs38g8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Três Lagoas</h2>
+              Endereço: Av. Rafael Haro, 13596, Três Lagoas - MS <br>
+              <mark>Telefones: (67) 3320-3767 <br> (67) 3557- 1007 <br></mark>
+              Email: del08p01.ms@prf.gov.br <br> del07.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/5w1JAudtvzUyazJi9" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Água Clara</h2>
+              Endereço: BR 262 - Km 141,5 - Água Clara/MS <br>
+              <mark>Telefone: (67) 3320-3768 <br> (67) 3239-1524 <br></mark>
+              Email: del08p02.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/azJDcHWPPHRDBqZ19" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Paranaíba</h2>
+              Endereço: Rua Clementina Maria de Freitas, 199 <br>
+              <mark>Telefones: (67) 3320-3679 <br> (67) 3320-3769 <br></mark>
+              Email: del09p01.ms@prf.gov.br <br> del08.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/cJchAuYYszuKGrEC6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Naviraí</h2>
+              Endereço: BR 163 - Km 130,5 <br>
+              <mark>Telefones: (67) 3320-3656 <br> (67) 3320-3755 <br></mark>
+              Email: del09.ms@prf.gov.br <br>  del10p01.ms@prf.gov.br <br>
+              <a href="https://goo.gl/maps/g3WRWKWnAygwFZ6F9" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Eldorado</h2>
+              Endereço: BR 163,Km 023 Eldorado/MS - 79980-000 <br>
+              <mark>Telefone: (67) 3474-1498 <br> (67) 3474-2100 <br></mark>
+              Email: del10p02.ms@prf.gov.br  <br>
+              <a href="https://goo.gl/maps/hLM91QJwxT3rhvDr7" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+  
+      <section id="minas-gerais">
+         <h1 class="estados">Minas Gerais</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Praça Antônio Mourão Guimarães, s/n, - Cidade Industrial - Contagem/MG - CEP: 32. 210-905 <br>
+          <mark>Telefone: (31) 3064-5300 <br> (31) 3064-5391 <br> (31) 3064-539 <br></mark>
+          <a href="https://goo.gl/maps/VW2HrrUkt5nKWE3r6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Sabará</h2>
+          Endereço: Rodovia BR 381, Km 450 - Bom Destino, Sabará/MG <br>
+          <mark>Telefone: (31) 3691-1572 - (31) 3064-5402 <br></mark>
+          E-mail: del01p01.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/rzgtahXDsRgUErfA9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Nova Lima</h2>
+          Endereço:BR 040, Km 554 - Jardim Canada - Nova Lima/MG <br>
+          <mark>Telefone: (31) 3542-9819 <br></mark>
+          E-mail: del01p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/q4r9xEsoefGUvy536" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Betim</h2>
+          Endereço: BR-381, km 499 - Parque Ipiranga - Betim/MG <br>
+          <mark>Telefone: (31) 3530-6675 <br></mark>
+          E-mail: del01p03.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/88Cv9u7vi5zGVaYL9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Sete Lagoas</h2>
+          Endereço: BR 040, Km 470 <br>
+          <mark>Telefone: (31) 3773-2633 <br></mark>
+          Email: del02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/swe7E3Mf2bPM717F8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF João Monlevade</h2>
+          Endereço: BR 381, km 355 - Cruzeiro Celeste - João Monlevade/MG - CEP: 35-931-267 <br>
+          <mark>Telefone: (31) 99657-7518 <br></mark>
+          <a href="https://goo.gl/maps/D3fNNzDuk35VzeXL9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Jaguaraçu</h2>
+          Endereço: BR 381, km 283 - Zona Rural - Jaguaraçu/MG <br>
+          <mark>Telefone: (31) 98312-7796 <br></mark>
+          Email: del03p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/zTL3Znmzmjwvdkzd7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Rio Casca</h2>
+          Endereço: BR 262, km 121 <br>
+          <mark>Telefone: (31) 99847-4530 <br></mark>
+          Email: del03p03.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yHDYB4zCgFNPDApm8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Oliveira</h2>
+          Endereço: BR381, km 609 <br>
+          <mark>Telefone: (37) 99823-3806 <br> (31) 3064 5411 <br> (37) 99860-4071 <br> (31) 3064-5410 <br></mark>
+          Email: del04p01.mg@prf.gov.br <br> del04.mg@prf.gov.br  <br>
+          <a href="https://goo.gl/maps/tAL9DjAdJ1UNh5YK8" target="_blank">Clique aqui para ver no mapa</a>             
+        </address>
+        <address>
+          <h2 class="prf">PRF Perdões</h2>
+          Endereço: BR381, km 679 <br>
+          <mark>Telefone: (35) 99886-2522 <br> (31) 3064 5412 <br> (35) 38641427 <br> (35) 99886-2522 <br></mark>
+          Email: del04p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Z3gibTCQnWFYPxcL7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Itatiaiuçu</h2>
+          Endereço: BR381, km 537 <br>
+          <mark>Telefone: (31) 99623-9109 <br></mark>
+          Email: del04p03.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/4REHFghCbioSBZn38" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Juiz de Fora</h2>
+          Endereço: BR 040, Km 766, Juiz de Fora, MG <br>
+          <mark>Telefone: (32) 3257-0933 <br> (32) 3222-5814 <br></mark>
+          Email: del050p01.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/7EKzuyQqRJeESA7TA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Congonhas</h2>
+          Endereço:BR 040, km 607 <br>
+          <mark>Telefone: (31) 3731-3968 <br> (31) 99560-1136 <br></mark>
+          E-mail: del05p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/vTbwasN2NvAZN7w3A" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Governador Valadares</h2>
+          Endereço: "Br 116, km 419, Bairro Atalaia, Governador Valadares/MG <br>
+          <mark>Telefone: (33) 3273-2015 <br> (33) 3272-1590 <br> (33) 98449-2296 <br></mark>
+          Email: del06.mg@prf.gov.br <br> del06p01.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/PsspVg36qPryryMi9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Caratinga</h2>
+          Endereço: BR 116, km 524 <br>
+          <mark>Telefone: (33) 3321-6765 <br> (33) 98449-1415 <br></mark>
+          Email: del06p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/VcgWEB8caM64Uyx4A" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Manhuaçu</h2>
+          Endereço: BR116, km 589 <br>
+          <mark>Telefone: (33) 3333-1288 <br> (33) 3333-1293 <br> (33) 98449-2390 <br></mark>
+          Email: del06p03.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/iVJ2yZqZN5tNPQtFA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+           
+            <h2 class="prf">PRF Leopoldina</h2>
+            Endereço: BR 116 Km 768 <br>
+            <mark>Telefone: (032) 3441-7051 <br> (32) 99838-1425 <br> (32) 3441-0040 <br></mark>
+            Email: del07p01.mg@prf.gov.br <br>
+            <a href="https://goo.gl/maps/M46q7EY2NAz9PBoM8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+         <address>
+          <h2 class="prf">PRF Muriaé</h2>
+          Endereço: BR 116 Km 706 <br>
+          <mark>Telefone: (32) 3722-1937 <br> (32) 99831-4277 <br></mark>
+          Email: del07p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/KcrnyHMFdnUWYCsR8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Araxá</h2>
+          Endereço: BR262, KM 677 - Araxá/MG <br>
+          <mark>Telefone: (34) 3662-7548 <br> (34) 99943-5693 <br></mark>
+          Email: del08.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/X9YsFnE5HW5m7EHP9" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Campos Altos</h2>
+          Endereço: BR 262, Km 575 <br>
+          <mark>Telefone: (37) 99961-8360 <br></mark>
+          Email: del08p02.mg@prf.gov.br <br>
+          <a href="https://goo.gl/maps/gSxBMBdXSzxL6dDt6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+          <address>
+            <h2 class="prf">PRF Bom Despacho</h2>
+            Endereço: BR262, KM 474 <br>
+            <mark>Telefone: (37) 3521-4693 <br> (37) 3521-4706 <br></mark>
+            Email: del08p03.mg@prf.gov.br <br>
+            <a href="https://goo.gl/maps/SgnYZ2ADufnXrg4w8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF Poços de Caldas</h2>
+            Endereço: BR 146, km 517,5 - Bairro Jardim Nova Califórnia - Poços de Caldas/MG <br>
+            <mark>Telefone: (35) 3713-3636 <br> (35) 3713-1340 <br></mark>
+            Email: del09.mg@prf.gov.br <br> del09p01.mg@prf.gov.br <br>
+            <a href="https://goo.gl/maps/uAcXJ27xiANq8DqJ7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+            <address>
+              <h2 class="prf">PRF Patos de Minas</h2>
+              Endereço: BR 365, km 413, Zona Rural, Patos de Minas/MG <br>
+              <mark>Telefone: (34) 3859-0100 <br>(34) 3859-0590 <br></mark>
+              E-mail: del10.mg@prf.gov.br <br> del14p02.mg@prf.gov.br <br>
+              <a href="https://goo.gl/maps/AaGwsDx7PBQHWNfy6" target="_blank">Clique aqui para ver no mapa</a>                
+            </address>
+             <address> 
+              <h2 class="prf">PRF Teófilo Otoni</h2>
+              Endereço: Rua Engenheiro Celso Murta, n° 218 - Bairro Dr. Laerte Laender - Teófilo Otoni/MG <br>
+              <mark>Telefone: (33)3521-1606 <br> (33) 3521-4474 <br> (33) 99974-8863 <br></mark>
+              Email: del11.mg@prf.gov.br <br> del11p01.mg@prf.gov.br <br>
+              <a href="https://goo.gl/maps/2zew6rC4skSZ6kgG9" target="_blank">Clique aqui para ver no mapa</a>
+             </address>
+              <address>
+                <h2 class="prf">PRF Itaobim</h2>
+                Endereço: BR 116, km 118 <br>
+                <mark>Telefone: (33) 3734-1668 <br> (33) 99987-1044 <br></mark>
+                Email: del11p02.mg@prf.gov.br <br>
+                <a href="https://goo.gl/maps/j4A51UgxiyRtPpYB7" target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+               <address>
+                <h2 class="prf">PRF Montes Claros</h2>
+                Endereço: BR-251, km 513,8 - Montes Claros-MG <br>
+                <mark>Telefone: (31) 3064-5445 <br></mark>
+                Email: del12.mg@prf.gov.br <br>
+                <a href="https://goo.gl/maps/ezKsU4Ajc32hfKgU6" target="_blank">Clique aqui para ver no mapa</a>
+               </address>
+               <address>
+                <h2 class="prf">PRF Uberaba</h2>
+                Endereço: "BR 050, KM 166 - Bairro Distrito Industrial II - Uberaba / MG <br>
+                <mark>Telefone: (34)3336-8100 <br> (34) 3336-9655 <br> (34) 99905-5381 <br></mark>
+                E-mail: del13.mg@prf.gov.br / del13p01.mg@prf.gov.br <br>
+                <a href="https://goo.gl/maps/RvnpJkriwh2ZECvc8" target="_blank">Clique aqui para ver no mapa</a>
+               </address>
+               <address>
+                <h2 class="prf">PRF Frutal</h2>
+                Endereço: BR 153, KM 195 <br>
+                <mark>Telefone: (34)99316-0001 <br> (34) 3459-0100 <br> (34) 3459-0101 <br></mark>
+                E-mail: del13p02.mg@prf.gov.br <br>
+                <a href="https://goo.gl/maps/Zu16saRnpdZZTxF17" target="_blank">Clique aqui para ver no mapa</a>
+               </address>
+               <address>
+                <h2 class="prf">PRF Paracatu</h2>
+                Endereço: BR 040, KM 47,5 - Paracatu/MG <br>
+                <mark>Telefone: (38) 3672-3376 <br> (38) 3671-3938  <br> (38) 99964-0663 <br></mark>
+                Email: del14.mg@prf.gov.br <br> del14p01.mg@prf.gov.br <br>
+                <a href="https://goo.gl/maps/T2RF4F55aR9mqHbVA" target="_blank">Clique aqui para ver no mapa</a>
+               </address>
+                <address> 
+                  <h2 class="prf">PRF Três Marias</h2>
+                  Endereço: BR 040, km 284,2 <br>
+                  <mark>Telefone: (38)3754-5916 <br> (38) 99724-7957 <br> (38) 3754-7210 <br></mark>
+                  Email: del14p02.mg@prf.gov.br <br>
+                  <a href="https://goo.gl/maps/Swkinriot2LLyXV79" target="_blank">Clique aqui para ver no mapa</a>
+                </address>
+                 <address>
+                  <h2 class="prf">PRF Uberlândia</h2>
+                  Endereço: BR 365 km 634, Zona Rural - Uberlândia/MG <br>
+                  <mark>Telefone: (34) 3231-7142 <br>  (34) 3217-2132 <br> (34) 99806-3523 <br></mark>
+                  e-mail: del15.mg@prf.gov.br <br>
+                  <a href="https://goo.gl/maps/G8Zo6WX92YvB3esa9" target="_blank">Clique aqui para ver no mapa</a>
+                 </address>
+                  <address>
+                    <h2 class="prf">PRF Araguari</h2>
+                    Endereço: BR 050 km 42 <br>
+                    <mark>Telefone: (34) 99811-0937 <br> (34) 3217-3122 <br></mark>
+                    e-mail: del15p02.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/dU5nAx2J4pBWcdVy8" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                  <address>
+                    <h2 class="prf">PRF Monte Alegre de Minas</h2>
+                    Endereço: BR 153 km 56 <br>
+                    <mark>Telefone: (34) 99806-7298 <br></mark>
+                    Email: del15p03.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/Y8YAzv89gxvp9bQs7" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                  <address>
+                    <h2 class="prf">Delegacia em Pouso Alegre</h2>
+                    Endereço: Rua Cel Joaquim Roberto Duarte, 528 - N. S. Aparecida - Pouso Alegre/MG <br>
+                    <mark>Telefone: (35) 3421-7695 <br></mark>
+                    Email: del16.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/Y11LXF2jWrpxRpkq5" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                  <address>
+                    <h2 class="prf">PRF Pouso Alegre</h2>
+                    Endereço: BR 381, Km 871 <br>
+                    <mark>Telefone: (35) 99986-6632 <br> (35) 3429-8191 <br> (31) 3064-5300 <br></mark>
+                    Email del16p01.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/ebR7GxsqdR2BYJWQ9" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                   <address>
+                    <h2 class="prf">PRF Três Corações</h2>
+                    Endereço: BR 381, Km 758 <br>
+                    <mark>Telefone: (35) 99914-5569 <br></mark>
+                    Email del16p02.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/g32VRtz4z4wHQGAf9" target="_blank">Clique aqui para ver no mapa</a>
+                   </address>
+                  <address>
+                    <h2 class="prf">PRF Itapeva</h2>
+                    Endereço: BR 381, Km 926 <br>
+                    <mark>Telefone: (35) 99877-7311 <br> (35) 3434-1564 <br></mark>
+                    Email del16p03.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/mUCnrJq4cZHAjUAU6" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                  <address>
+                    <h2 class="prf">PRF Caxambu</h2>
+                    Endereço: BR 267, KM 308 - Caxambu/MG <br>
+                    <mark>Telefone: (31) 3064-5431 <br> </mark>
+                    Email: del17.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/UxVfQuqj19Qm1Cee6" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+                  <address>
+                    <h2 class="prf">PRF Pouso Alto</h2>
+                    Endereço: BR 354, KM 744 <br>
+                    <mark>Telefone: (35)3364-7332 <br> (35) 3364-7181 <br> (31) 3064-5432 <br> (35) 99816-9534 <br></mark>
+                    Email: del17p02.mg@prf.gov.br <br>
+                    <a href="https://goo.gl/maps/zwYiRvPYGg5LWK7z8" target="_blank">Clique aqui para ver no mapa</a>
+                  </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="para">
+        <h1 class="estados">Pará</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Avenida Júlio César (prédio CENSIPAM), Bairro Val de Cans, Belém/PA, CEP: 66.617-420 <br>
+          <mark>Telefone: (91) 3282-9393 <br> (91) 3241-4225 <br></mark>
+          E-mail: sprf.pa@prf.gov.br <br>
+          <a href="https://goo.gl/maps/hie8tZ2iWEWKfUXT6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+         <address>
+          <h2 class="prf">PRF Capanema</h2>
+          Endereço: BR 316, KM 156 - Capanema/PA - CEP: 68.700-000 <br>
+          <mark>Telefones: (91) 3282-9410 <br> (91) 3282-9415 <br></mark>
+          E-mail: del01p05.pa@prf.gov.br <br>
+          <a href="https://goo.gl/maps/oKAAW8HM7ruByrdD6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Benevides</h2>
+          Endereço: BR 316,Km 021 Benevides/PA - 68795-970 <br>
+          <mark>Telefones: (91) 3282-9412 <br> (91) 3282-9410 <br></mark>
+          Email: del01p02.pa@prf.gov.br <br>
+          <a href="https://goo.gl/maps/aDNCX5vr7qTJfBT97" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Ipixuna</h2>
+          Endereço: BR 010, KM 229 - Ipixuna do Pará/PA - CEP: 68.637-000 <br>
+          <mark>Telefone: (91) 3282-9420 <br></mark>
+          <a href="https://goo.gl/maps/nroP1JpbFbrZiC2p7" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Dom Eliseu</h2>
+          Endereço: 3906, BR-010, 3732, Dom Eliseu - PA, 68633-000 <br>
+          <mark>Telefone: (94) 98142-7598 <br></mark>
+          <a href="https://goo.gl/maps/GJ7EwCCJAH8sxMRbA" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Marabá</h2>
+          Endereço: BR 230, KM 120, Rua Mogno, 6665, Bairro Amapá, Marabá/PA, CEP: 68.502-610 <br>
+          <mark>Telefones: (91) 3282-9430 <br> (91) 98169-0022 <br></mark>
+          <a href="https://goo.gl/maps/7Zj6BioQgN2MiFLU7" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Altamira</h2>
+          Endereço: BR 230, KM 630, Altamira/PA, CEP: 68.371-250 <br>
+          <mark>Telefones: (91) 3282-9440 <br> (91) 3282-9441 <br> (91) 3321-1941 <br></mark>
+          E-mail: del04p01.pa@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yGvh4iZWEZF3JfBz6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Santarém</h2>
+          Endereço: BR 163, KM 995, Santarém/PA, CEP: 68.033-010 <br>
+          <mark>Telefones: (91) 3282-9450 <br> (91) 3282-9451 <br></mark>
+          <a href="https://goo.gl/maps/GkrD88YCtX61XAUW6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="paraiba">
+        <h1 class="estados">Paraíba</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Rodovia BR 230, Km 23. João Pessoa/PB. CEP: 58071-680. <br>
+          <mark>Telefone: (83) 3533-4705 <br> (83) 3533-4700 <br> (83) 3533-4701 <br></mark>
+          E-mail: atendimento.pb@prf.gov.br <br> del01.pb@prf.gov.br <br>
+          <a href="https://goo.gl/maps/acgy3MfhGwoA9qUM8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Bayeux</h2>
+          Endereço: Rod. Gov. Antonio Mariz, 3000 - Mario Andreazza, Bayeux - PB, 58309-788 <br>
+          <mark>Telefone: (83) 3533-4711 <br></mark>
+          <a href="https://goo.gl/maps/WDNZGexqv1azwbe39" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Alhandra</h2>
+          Endereço: Rodovia BR 101, Km 107,7. Alhandra/PB. Cep: 58320-000. <br>
+          <mark>Telefone: (83) 3533-4712 <br></mark>
+          Email: del01p02.pb@prf.gov.br <br>
+          <a href="https://goo.gl/maps/LskFzRZZ8ZjXXhtcA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Mamanguape</h2>
+          Endereço: Rodovia BR 101, km 38. Mamanguape/PB. Cep: 58280- 000. <br>
+          <mark>Telefone: (83) 3533-4714 <br></mark>
+          Email: del01p04.pb@prf.gov.br <br>
+          <a href="https://goo.gl/maps/dnCdqA4G8z9oHRVG7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Campina Grande</h2>
+          Endereço: Avenida Severino Bezerra Cabral,s/n. Campina Grande/PB. CEP: 58407-660. <br>
+          <mark>Telefones: (83) 3533-4702 <br> (83) 3533-4721 <br></mark>
+          E-mail: del02.pb@prf.gov.br <br>
+          <a href="https://goo.gl/maps/y3i7uN6QoRFEcp8M9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Pocinhos</h2>
+          Endereço: Rod. Gov. Antonio Mariz, 2500, Pocinhos - PB, 58150-000 <br>
+          <mark>Telefone: (83) 3533-4722 <br></mark>
+          <a href="https://goo.gl/maps/on1bMyUHWAFSE1mt7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Esperança</h2>
+          Endereço: BR-104, 457, Esperança - PB, 58135-000 <br>
+          <mark>Telefone: (83) 3533-4725 <br></mark>
+          <a href="https://goo.gl/maps/cxsDVrSNnSWw8FGh9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Queimadas</h2>
+          Endereço: Rodovia BR 104, Km 142,5. Queimadas/PB. Cep: 58440- 000 <br>
+          <mark>Telefone: (83) 3533-4723 <br> (83) 3392-1484 <br></mark>
+          Email: del02p03.pb@prf.gov.br <br>
+          <a href="https://goo.gl/maps/54khXuU7CAtR39Vy5" target="_blank">Clique aqui para ver no mapa</a>  
+        </address>
+        <address>
+          <h2 class="prf">PRF Patos</h2>
+          Endereço: 55-49 - R. Laurênio de Queiróz - Belo Horizonte, Patos - PB, 58704-220 <br>
+          <mark>Telefone: (83) 3533-4703 <br></mark>
+          <a href="https://goo.gl/maps/bKzd3FMWR3f1Ttvi7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Mamede</h2>
+          Endereço: São Mamede - State of Paraíba, 58625-000 <br>
+          <mark>Telefone: (83) 3533-4731 <br></mark>
+          <a href="https://goo.gl/maps/3D7PBTKWnxgLaAQW8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Pombal</h2>
+          Endereço: BR 230,Km 408, Pombal - PB <br>
+          <mark>Telefone: (83) 3431-3490 <br></mark>
+          <a href="https://goo.gl/maps/g2yz6NkHX4WM8PGE9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Cajazeiras</h2>
+          Endereço Cajazeiras - State of Paraíba, 58900-000 <br>
+          <mark>Telefone: (83) 3533-4733 <br></mark>
+          <a href="https://goo.gl/maps/2c8MDnTbNYuGYEWAA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Sobrado</h2>
+          Endereço: Sobrado - State of Paraíba, 58342-000 <br>
+          <mark>Telefone: (83) 3533-4713 <br></mark>
+          <a href="https://goo.gl/maps/f5muiriDMEaRQiKCA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="parana">
+        <h1 class="estados">Paraná</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Av. Linha Verde, 10150 - Prado Velho, Curitiba - PR, 81690-150 <br>
+          <mark>Telefone: (41) 3535-1910 <br></mark>
+          E-mail: atendimento.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/pjNt2f4wmUD1B6DXA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Contorno Leste Curitiba - São José dos Pinhais</h2>
+          Endereço: km 95 - Rodovia, Contorno Leste de Curitiba, BR-116 - Roseira, São José dos Pinhais -  PR, 83015-162 <br>
+          <mark>Telefone: (41) 3535-2111 <br></mark>
+          <a href="https://goo.gl/maps/9bKzdhQpeyfeBQp69" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Colombo</h2>
+          Endereço: BR-116, Acesso Norte, km 12,5, número 4.925, Jardim dos Palmares, Colombo (PR), CEP 83412-000 <br>
+          <mark>Telefone: (41) 3535-2110 <br></mark>
+          E-mail: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Y7JWMDb1iooc8yma9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Paranaguá</h2>
+          Endereço: BR-277, km 12, Paranaguá (PR), CEP 83250-000 <br>
+          <mark>Telefone: (41) 3535-2115 <br></mark>
+          Email: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/7GsAuWPGoep96D1F9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Tijucas do Sul</h2>
+          Endereço: BR-376, km 662, Tijucas do Sul (PR), CEP 83190-000  <br>
+          <mark>Telefone: (41) 3535-2114 <br> (41) 3535-2119 <br></mark>
+          Email: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/AjCx1WGQuHRhkWiC8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Mandirituba</h2>
+          Endereço: BR-116, km 137,5, Mandirituba (PR), CEP 83800-000 <br>
+          <mark>Telefone: (41) 3535-2113 <br></mark>
+          Email: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/wxvXeMTUWdX8dUCAA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Luiz do Purunã</h2>
+          Endereço: BR-277, km 139,6, Balsa Nova (PR), CEP 83650-000 <br>
+          <mark>Telefone: (41) 3535-2116 <br></mark>
+          Email: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/nTLbwyS779kevNqg7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Taquari</h2>
+          Endereço: BR-116, km 55,8, Campina Grande do Sul (PR), CEP 83430-000 <br>
+          <mark>Telefone: (41) 3535-2112 <br></mark>
+          Email: del01.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/S834RGAYcFMFocAi7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Pato Branco</h2>
+          Endereço: Rua Governador Jorge Lacerda, 72, Centro, Pato Branco (PR), CEP 85501-038 <br>
+          <mark>Telefone: (41) 3535-2120 <br> (41) 3535-2121 <br></mark>
+          E-mail: del02.pr@prf.gov.br <br>
+          <a href="https://goo.gl/maps/kn3bZveDZqqF3NnS8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Pato Branco</h2>
+            Endereço: Bortot, Pato Branco - State of Paraná <br>
+            <mark>Telefone: (46) 3223-4478 <br></mark>
+            <a href="https://goo.gl/maps/DSiXK91RqWuaPpED9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Planalto</h2>
+            Endereço: BR-163, km 83, Planalto (PR), CEP 85750-000 <br>
+            <mark>Telefone: (41) 3535-2124 <br> (46) 3355-14333</mark> <br>
+            Email: del02.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/bDTCMYZ5x3LQBwxdA" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF São Mateus do Sul</h2>
+            Endereço: BR-476, km 273, São Mateus do Sul (PR), CEP 83900-000 <br>
+            <mark>Telefone: (41) 3535-2123 <br></mark>
+            Email: del02.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/tXb8x686qfFvw8Du8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Porto Vitória</h2>
+            Endereço: BR-153, km 472, Porto Vitória (PR), CEP 84615-000 <br>
+            <mark>Telefone: (41) 3535-2122 <br></mark>
+            Email: del02.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/DiiTKAhrJAE6zfVE7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">Delegacia em Ponta Grossa</h2>
+            Endereço: Rua Dr. Penteado de Almeida, 780, bairro São José, Ponta Grossa (PR) <br>
+            <mark>Telefone: (41) 3535-2130 <br> (42) 99162-7754 <br></mark>
+            E-mail: del03.pr@prf.gov.br <br>
+           <a href="https://goo.gl/maps/AEzNDTmPDJKPkrsD8" target="_blank">Clique aqui para ver no mapa</a>             
+          </address>
+          <address>
+            <h2 class="prf">PRF Ponta Grossa</h2>
+            Endereço: BR-376, 324 - Colonia Dona Luiza, Ponta Grossa - PR <br>
+            <mark>Telefone: (41) 3535-2133 <br></mark>
+            Email: del03.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/2T6hQxvBtXC917JR8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Caetano</h2>
+            Endereço: Rod. do Café, BR - 373 - Km 184 - Zona Rural, Ponta Grossa - PR <br> 
+            <mark>Telefone: (41) 3535-2131 <br></mark>
+            <a href="https://goo.gl/maps/AqGFuTHkisoEAuok7" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address> 
+            <h2 class="prf">PRF Tibagi</h2>
+            Endereço: BR-376, km 412, Tibagi (PR) <br>
+            <mark>Telefone: (41) 3535-2135 <br></mark>
+            Email: del03.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/2HQU6V9PkpkqCF2b8" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Irati</h2>
+            Endereço: BR-277, km 245, Irati (PR), CEP 84500-000 <br>
+            <mark>Telefone: (41) 3535-2134 <br></mark>
+            Email: del03.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/dzoef7c2zrX8NgM67" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">Delegacia em Cascavel</h2>
+            Endereço: Rua Inspetor Everaldo Loures Xavier, 127, Turisparque, CEP 85819-012, Cascavel (PR) <br>
+            <mark>Telefone: (41) 3535-2140 <br></mark>
+            Atendimento: das 8 às 12 horas e 13 às 17 horas (de segunda à sexta-feira) <br>
+            E-mail: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/m6mdqZejLtwVGhxm6" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+          <address>
+            <h2 class="prf">PRF Cascavel</h2>
+            Endereço: BR-277, km 580, Cascavel (PR), CEP 85819-012 <br>
+            <mark>Telefones: (41) 3535-2141 <br></mark>
+            Email: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/tQ7W3xwNpd4VETtc9" target="_blank">Clique aqui para ver no mapa</a>
+          </address>
+           <address>
+            <h2 class="prf">PRF Catanduvas</h2>
+            Endereço: BR-277, km 549, Catanduvas (PR), CEP 85470-000 <br>
+            <mark>Telefone: (41) 3535-2142 <br></mark>
+            Email: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ETR789fY78RAZUjs5" target="_blank">Clique aqui para ver no mapa</a>
+           </address>                
+           <address>
+            <h2 class="prf">PRF Laranjeiras do Sul</h2>
+            Endereço: BR-277, km 451, Laranjeiras do Sul (PR) <br>
+            <mark>Telefone: (41) 3535-2143 <br></mark>
+            Email: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/KrQprjjzGBamX66XA" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Lindoeste</h2>
+            Endereço: BR-163, km 176, Lindoeste (PR), CEP 85826-000 <br>
+            <mark>Telefone: (41) 3535-2146 <br></mark>
+            Email: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/EPN3PKHGs5Eqpv8G6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Ubiratã</h2>
+            Endereço: BR-369, km 446, Ubiratã (PR) <br>
+            <mark>Telefone: (41) 3535-2144 <br> (44) 99105-4187 <br></mark>
+            Email: del04.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Qem58idWp3A3pRAW8" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">Delegacia em Foz do Iguaçu</h2>
+            Endereço: Rua da República, 98, Parque Presidente I, CEP 85863-400, Foz do Iguaçu (PR) <br>
+            <mark>Telefones: (41) 3535-2150 <br> (45) 99156-2856 <br></mark>
+            E-mail: del05.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/7sLfMm3r4CTTbFez8" target="_blank">Clique aqui para ver no mapa</a>                  
+           </address>
+           <address>
+            <h2 class="prf">PRF Santa Terezinha de Itaipu</h2>
+            Endereço: BR-277, km 714, Santa Terezinha de Itaipu (PR), CEP 85875-000 <br>
+            <mark>Telefone: (45) 3541-2393 <br> (45) 99142-0512 <br></mark>
+            Email: del05.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/A2eyJANJBz7Z4Zdy8" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Céu Azul</h2>
+            Endereço: BR-277, km 642, Céu Azul (PR) <br>
+            <mark>Telefones: (41) 3535-2152 <br> (45) 99143-1628 <br></mark>
+            Email: del05.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Kj7YnfmTGyULYf6YA" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+  
+           <address>
+            <h2 class="prf">PRF Ponte Internacional da Amizade</h2>
+            (Fronteira Brasil – Paraguai) <br>
+            Endereço: BR-277, km 730, Foz do Iguaçu (PR) <br>
+            <mark>Telefones: (41) 3535-2153 <br> (45) 99145-0601 <br></mark>
+            Email: del05.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/wxUVg7ZEcbLNPbXH6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Guaíra</h2>
+            Endereço: BR-272, km 561,8, Zona Rural, Guaíra (PR) <br>
+            <mark>Telefones: (41) 3535-2160 <br> (44) 99159-5623 <br> (41) 3535-2162 <br> (44) 99146-8131 <br></mark>
+            Atendimento: das 8 às 16 horas (sem intervalo, de segunda à sexta-feira) <br>
+            E-mail: del06.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/sdW6y89wkpUYAb336" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Ponte Ayrton Senna</h2>
+            Endereço: BR-163, km 350, Guaíra (PR), CEP 85980-000 <br>
+            <mark>Telefone: (44) 3642-5552 <br> (41) 3535-2161 <br> (44) 99137-7894 <br></mark>
+            Email: del06.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/CToSEhseUC8obaKM6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Porto Camargo</h2>
+            Endereço: BR-487, km 9, Alto Paraíso (PR), CEP 87532-000 <br>
+            <mark>Telefone: (44) 3665-1058 <br> (41) 3535-2163 <br> (44) 99154-6012 (somente WhatsApp) <br></mark>
+            Email: del06.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/hTnUUeQforDLR4bD7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Quatro Pontes</h2>
+            Endereço: BR-163, km 280, Quatro Pontes (PR), CEP 85940-000 <br>
+            <mark>Telefone: (45) 3222-0540 <br> (41) 3535-2164 <br> (44) 99157-2893 <br></mark>
+            Email: del06.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/b97kRkMpvtEShMAo8" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">Delegacia em Londrina</h2>
+            Endereço: Av. Dr. Francisco Xavier Toda, 125, Cilo III, Parque Industrial Cacique, Londrina (PR) <br>
+            <mark>Telefones: (41) 3535-2170 <br></mark>
+            E-mail: del07.pr@prf.gov.br <br>
+            <a href="https://g.page/PRF-Londrina?share" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Ibiporã</h2>
+            Endereço: BR-369, km 131, Ibiporã (PR) <br>
+            <mark>Telefone: (41) 3535-2171 <br></mark>
+            Email: del07.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/purwFsYKcX4Ge7EF9" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Mauá da Serra</h2>
+            Endereço: BR-376, km 297, Mauá da Serra (PR) <br>
+            <mark>Telefone: (41) 3535-2172 <br></mark>
+            Email: del07.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/pknrfaiF1vccRhha6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Santo Antônio da Platina</h2>
+            Endereço: BR-153, km 40, Santo Antônio da Platina (PR) <br>
+            <mark>Telefone: (41) 3535-2178  <br> (41) 3535-2177 <br></mark>
+            Email: del07.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/ppw9UQ4Bxurdaqcz7" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Apucarana</h2>
+            Endereço: BR-376, km 247, Apucarana (PR) <br>
+            <mark>Telefone: (41) 3535-2173  <br> (43) 99138-1383 <br></mark>
+            Email: del07.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/CaeU71jBB9qFPTA2A" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Cornélio Procópio</h2>
+            Endereço: BR-369, km 83, Cornélio Procópio (PR) <br>
+            <mark>Telefone: (41) 3535-2176 <br></mark>
+            Email: del07.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/Wnste93FhcMRXYzR6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">Delegacia em Guarapuava</h2>
+            Endereço: R. Prof. Becker, 1950 - Centro, Guarapuava - PR, 85010-170 <br>
+            <mark>Telefones: (42) 3055-8701 <br> (41) 3535-2180 <br></mark>
+            E-mail: del08.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/5HvmKYigAy39sQnJ8" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Guará</h2>
+            Endereço: BR-277, km 319, Guarapuava (PR) <br>
+            <mark>Telefone: (41) 3535-2179 <br></mark>
+            Email: del08.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/96PRNWDM5Ve7JZNv7"  target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">Delegacia em Maringá</h2>
+            Endereço: Av. Paranavaí 2037,  Parque Industrial Bandeirantes, CEP 87070-130, Maringá (PR) <br>
+            <mark>Telefones: (41) 3535-2190 <br></mark>
+            E-mail: del09.pr@prf.gov.br <br>
+            <a href="https://goo.gl/maps/1h37jyuJHZSkqSbc6" target="_blank">Clique aqui para ver no mapa</a>
+           </address>
+           <address>
+            <h2 class="prf">PRF Marialva</h2>
+            Endereço: Rodovia BR 376, Km 189.100, S/n, Marialva - PR, 86990-000 <br>
+            <mark>Telefone: (41) 3535-2174 <br></mark>
+            <a href="https://goo.gl/maps/VNbKoaYYoMAVbgfS8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRE Floresta - Polícia Rodoviária Estadual</h2>
+              Endereço: PR-317, 400, Floresta - PR, 87120-000 <br>
+              <mark>Telefone: (44) 3266-1315 <br></mark>
+              <a href="https://goo.gl/maps/3z6koNpP6U3gCGY87" target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+              <address>
+                <h2 class="prf">PRF Alto Paraná</h2>
+                Endereço: BR-376, km 116, Alto Paraná (PR) <br>
+                <mark>Telefone: (41) 3535-2175 <br></mark>
+                Email: del09.pr@prf.gov.br <br>
+                <a href="https://goo.gl/maps/Jsh5bq5k2adqznBLA" target="_blank">Clique aqui para ver no mapa</a>
+              </address>
+            <address>
+              <h2 class="prf">PRF Campo Mourão</h2>
+              Endereço: BR-369, km 366, Campo Mourão (PR), CEP 87300-000 <br>
+              <mark>Telefone: (41) 3535-2145 <br> (44) 99103-2293 <br></mark>
+              Email: del09.pr@prf.gov.br <br>
+              <a href="https://goo.gl/maps/qzmXqH9A1tZ1sgtD6" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+            <address>
+              <h2 class="prf">PRF Mandaguari</h2>
+              Endereço: BR-376, km 201, Mandaguari (PR) <br> 
+              <mark>Telefone: (41) 3535-2174 <br></mark>
+              Email: del09.pr@prf.gov.br <br>
+              <a href="https://goo.gl/maps/RcwZ8yjrjQwjXaYq8" target="_blank">Clique aqui para ver no mapa</a>
+            </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="pernambuco">
+        <h1 class="estados">Pernambuco</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          <mark>Telefone: (81) 3201-0700 <br> (81)3201-0737 <br></mark>
+          E-mail: atendimento.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/muKwB76Exx8NxXto8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Curado</h2>
+          Endereço: BR 101 - KM 69,5 - Recife/PE <br>
+          <mark>Telefone: (81) 3201-0710 <br></mark>
+          E-mail: del01.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/2sq1YAwi2qtS6u4i6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Água Preta</h2>
+          Endereço: BR 101 KM 69 - Recife/PE <br>
+          <mark>Telefone: (81) 3201-0711 <br>  (81) 3201-0713 <br></mark>
+          E-mail: del01p01.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/CQuoeiUtkkQV4NDy8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Igarassu</h2>
+          Endereço: BR 101,Km 029 Igarassu/PE - 53610-000 <br>
+          <mark>Telefone: (81) 3201-0712 <br></mark>
+          Email: del01p02.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Aqkw7WgbDCr8deQ96" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Gravatá</h2>
+          Endereço: BR 232, Km 71,5 Gravatá/PE <br>
+          <mark>Telefone:(81) 3201-0714 <br> (81) 3533-5656 <br></mark>
+          Email: del01p04.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/JU27tYkDoGT47XUy6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Caruaru e Juriti</h2>
+          Endereço: BR-104, Km 58 - Juriti Caruaru - PE - CEP, 55014-170 <br>
+          <mark>Telefones: (81) 3201- 0720 <br> (81) 3201-0721 <br></mark>
+          E-mail: del02.pe@prf.gov.br <br> del01p01@prf.gov.br <br>
+          <a href="https://goo.gl/maps/zb58mGtGKmtaiydK9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Caitano</h2>
+          Endereço: BR 232 KM - 145 - São Caitano/PE <br>
+          <mark>Telefone: (81) 3201-0722 <br></mark>
+          E-Mail: del02p02@prf.gov.br <br>
+          <a href="https://goo.gl/maps/XHpX8jTWcvfZsTjD9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Garanhuns</h2>
+          Endereço: BR 423 - KM 93 - Garanhuns/PE <br>
+          <mark>Telefone: (81) 3201-0731 <br> (81) 3201-0730 <br></mark>
+          E-mail: del03.pe@prf.gov.br <br>  del03p01.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/HzuN2cqR8XnNZsaJ8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Cruzeiro do Nordeste</h2>
+          Endereço: BR 232, Km 285, Sertânia/PE <br>
+          <mark>Telefone: (81) 3201-0732 <br></mark>
+          E-mail: del03p02.pe@prf.gov.br <br>
+         <a href="https://goo.gl/maps/PvAgxpZsBTfC6aje9" target="_blank">Clique aqui para ver no mapa</a>  
+        </address>
+        <address>
+          <h2 class="prf">PRF Serra Talhada</h2>
+          Endereço: BR 232 - KM 406,3 - Serra Talhada/PE <br>
+          <mark>Telefone:  (87) 3201-0741 <br> (87) 3201-0740 <br> (87) 3201-0751 <br></mark>
+          E-mail: del04.pe@prf.gov.br <br> del04p01.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/STHJoSEDRtTcZcpt5" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Floresta</h2>
+          Endereço: BR 232, Km 317, Floresta/PE <br>
+          <mark>Telefone:(81) 3201-0742 <br></mark>
+          Email: del04p02.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/b7ykNtN992c4n74A7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Salgueiro</h2>
+          Rua Gertúlio Vargas, 892 - Nossa Sra. Aparecida, Salgueiro - PE, 56000-000 <br>
+          <mark>Telefone: (87) 3201-0750 <br> (81) 3201-0751 <br></mark>
+          E-mail: del05.pe@prf.gov.br <br> del05p01.pe@prf.gov.br <br> 
+          <a href="https://goo.gl/maps/Suio7iVi1cJsYeQ16" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Ouricuri</h2>
+          Endereço: BR 316 KM 83 - Ouricuri/PE <br>
+          <mark>Telefone: (87) 3201-0752 <br> (87) 3874-1034 <br></mark>
+          E-mail: del05p02.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/ZWQYeisDTUhV72kK8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Trevo de Ibó</h2>
+          Endereço: BR 116 KM 82, Belém de São Francisco/PE <br>
+          <mark>Telefone: (81) 3201-0753 <br></mark>
+          E-mail: del05p03.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/FugUikh3Q8KZ3hn77" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Petrolina</h2>
+          Endereço: BR 428 - KM 185,8 - Petrolina/PE <br>
+          <mark>Telefones: (87) 3201-0760 <br> (87) 3861-6249 <br></mark>
+          E-mail: del06.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/AgzJmbmFkfn3sGQy9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Santa Maria de Boa Vista</h2>
+          Endereço: BR 428, Km 83, Santa Maria da Boa Vista/PE <br>
+          <mark>Telefone: (81) 3201-0763 <br></mark>
+          Email: del06p03.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/z7RWkqtTYZiUsYHUA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Rajada</h2>
+          Endereço: BR 407, Km 42, Rajada/PE <br>
+          <mark>Telefone: (81) 3201-0762 <br></mark>
+          E-mail: del06p02.pe@prf.gov.br <br>
+          <a href="https://goo.gl/maps/WAqe9dQRehhSFzzG7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+      </section>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <section id="piaui">
+        <h1 class="estados">Piauí</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Avenida João XXIII, 1516 Noivos, Teresina/PI - CEP: 64045-000 <br>
+          <mark>Telefone: (86) 3302-6300 <br> (86) 2106-4937 <br> (86) 3302-6357 <br></mark>
+          Email: atendimento.pi@prf.gov.br <br> del01.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/qnAWxVvMSKRsEDnF9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Teresina</h2>
+          Endereço: BR 343,Km 333, Estaca Zero(Zona Rural), Teresina/PI - 64000-000 <br>
+          <mark>Telefone: (86) 3231-2545 <br> (86) 3231-2545 <br> (86) 3219-2380 <br></mark>
+          Email: del01p01.pi@prf.gov.br / del01p02.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/BBu6Tw47mtCWAABE7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address> 
+          <h2 class="prf">PRF Campo Maior</h2>
+          Endereço: BR 343 Km 269, Campo Maior/PI - 64280-000 <br>
+          <mark>Telefone: (86) 3252-1920 <br></mark>
+          Email: del01p03.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/rttsAab9Hex3a2gz5" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Piripiri</h2>
+          Endereço: BR 343, KM 189 Recurso, Piripiri/PI – CEP: 64260-000 <br>
+          <mark>Telefones: (86) 3276-1399 <br></mark>
+          Email: del02.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/M1ScVMFWCjLPerAE8" target="_blank">Clique aqui para ver no mapa</a>  
+        </address>
+        <address>
+          <h2 class="prf">PRF Floriano</h2>
+          Endereço: BR 230, KM 305 Bom Lugar, Floriano/PI – CEP: 64800-000 <br>
+          <mark>Telefones: (89) 3522-2199 <br> (89) 3562-1194 <br></mark>
+          Email: del03.pi@prf.gov.br <br>  del03p02.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/eg6Hb4thNbh6Qn9K9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Bom Jesus</h2>
+          Endereço: BR 135 Km 354  Bom Jesus/PI - 64900-000 <br>
+          <mark>Telefone: (89) 3562-1194 <br></mark>
+          Email: del03p02.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/VfsLy5F5t1fGZjJ29" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+        <address>
+          <h2 class="prf">PRF Picos</h2>
+          Endereço: BR 316, KM 292 Mirolândia, Picos/PI – CEP: 64600-000 <br>
+          <mark>Telefones: (89) 3422-4410 <br> (89)3421-9090 <br></mark>
+          Email: del04.pi@prf.gov.br <br> del04p01.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/E3g9qrqDCGG1wsTb6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Valença do Piauí</h2>
+          Endereço: BR 316 Km 207, Valença do Piauí/PI - 64300-000 <br>
+          <mark>Telefone: (89) 3465-2310 <br></mark>
+          Email: del04p02.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/rrYWVmTEf11q8SkL9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Alegrete do Piauí</h2> 
+          Endereço: BR 316 Km 381, Alegrete do Piauí/PI - 64675-000 <br>
+          <mark>Telefone: (89) 3436-1183 <br></mark>
+          Email: del04p03.pi@prf.gov.br <br>
+          <a href="https://goo.gl/maps/TB21HLAL8Z7rKsbT8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+      <address>
+        <h2 class="prf">PRF Parnaíba</h2>
+        Endereço: BR 343, KM 08 Número 5027 Bom São Judas Tadeu, Parnaíba/PI – CEP: 64206-260 <br>
+        <mark>Telefones: (86) 3323-4994 <br> (86) 3322-6510 <br></mark>
+        Email: del05.pi@prf.gov.br <br> del05p01.pi@prf.gov.br <br>
+        <a href="https://goo.gl/maps/UXjaqCrUMyu59XB56" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="rio-de-janeiro">
+        <h1 class="estados">Rio de Janeiro</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Rodovia Presidente Dutra (BR-116), Km 163, Rio de Janeiro/RJ, 21.240-001 <br>
+          E-mail: gab.rj@prf.gov.br <br>
+          <mark>Telefone: (21) 3503-9000 <br></mark>
+          <a href="https://goo.gl/maps/55V2oXvKuCWRADRA9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Duque de Caxias</h2>
+          Endereço: Rodovia Washington Luiz (BR-040), Km 109, Duque de Caxias/RJ, 25.213-005 <br>
+          <mark>Telefones: (21) 3503-2317 <br> (21) 3503-2316 <br> (21) 3503-2311 <br></mark>
+          E-mail: del01.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/ixKL15PdJ8riLHim9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Niterói</h2>
+          Endereço: Ponte Rio-Niterói (BR-101), Km 323, Niterói/RJ - CEP 24.050-300 <br>
+          <mark>Telefones: (21) 3503-2321 <br> (21) 3503-2328 <br></mark>
+          e-mail: del02.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/DiS3tN57j5rwuUR46" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Itaguaí</h2>
+          Endereço:  Rodovia Rio-Santos (BR-101), Km 399, Itaguaí/RJ <br>
+          <mark>Telefones: (21) 3503-2337 <br> (21) 3503-2336 <br> (21) 3503-2331 <br></mark>
+          E-mail: del03.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/tAeQtgYghXgU74ib8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia Magé</h2>
+          Endereço:  Avenida Presidente Roosevelt, 520, Teresópolis - 25.965-003 <br>
+          <mark>Telefones: (21) 3503-2341 <br> (21) 3503-2347 <br> 3503-2345 <br></mark>
+          E-mail: del04.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/f42tT2DZiinmMcjo7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Barra do Piraí</h2>
+          Endereço:  Rodovia Lúcio Meira (BR-393), Km 255, Barra do Piraí/RJ. 27.113-580 <br>
+          <mark>Telefones: (21) 3503-2357 <br> (21) 3503-2356 <br> (21) 3503-2352 <br></mark>
+          E-mail: del05.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/zviMACqErcqo63H58" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Petrópolis</h2>
+          Endereço:  BR-040, Km 47, Petrópolis/RJ, 25.770-700 <br>
+          <mark>Telefones: (21) 3503-2367 <br> (21) 3503-2366 <br> (21) 3503-2363 <br></mark>
+          E-mail: del06.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/dBGWmA9C3CnJJeDh8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Resende</h2>
+          Endereço:  Rodovia Presidente Dutra (BR-116), Km 304,3, Resende/RJ, 27.536-000 <br>
+          <mark>Telefones: (24) 98133-5313 <br></mark>
+          E-mail: del07.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/QfiLWYrGY2mFA9JUA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia em Campos dos Goytacazes</h2>
+          Endereço: Rua Dr. Silvio Bastos Tavares, 59, Parque Rodoviário, Campos dos Goytacazes/RJ, 28. 051-250 <br>
+          <mark>Telefones: (21) 3503-2380 <br> (22) 2732-2012 <br></mark>
+          E-mail: del08.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/WpxjLLY5sjW34ye57" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Pavuna</h2>
+          Endereço: Rodovia Presidente Dutra (BR-116), km 166, Pavuna  21.535-502 <br>
+          <mark>Telefone: (21) 3503-2312 <br></mark>
+          Email: del01.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/LiP9u13DJpfTztwU8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Gonçalo</h2>
+          Endereço: BR-101, km 307,9, Itaúna - 24.461-660 <br>
+          <mark>Telefone: (21) 3503-2322 <br></mark>
+          E-mail: del02.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/7m3zZcS6bGe4NiWbA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Rio Bonito</h2>
+          Endereço: BR-101 km 269, Rio de Bonito - 28.800-000 <br>
+          <mark>Telefone: (21) 3503-2323  <br></mark>
+          E-mail: del02.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/RQAiApFqJuKBTRmE8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Paraty</h2>
+          Endereço: Rodovia Rio-Santos (BR-101), Km 534, Paraty - 23.900-000 <br>
+          <mark>Telefone: (21) 3503-2333 <br> (24) 3371-2320 <br> (21) 3503-2334 <br></mark>
+          Email: del03.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/JDBtAsgeQGWQb7rAA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Teresópolis</h2>
+          Endereço: Rodovia Rio-Teresópolis (BR-116), km 71, Três Córregos - 25.907-000 <br>
+          <mark>Telefone: (21) 3503-2341 <br></mark>
+          Email: del04.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Xz9rHuqjnARwki2P8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Sapucaia</h2>
+          Endereço: BR-393, Km 137, Sapucaia - 25.880-000 <br>
+          <mark>Telefones: (21) 3503-2362 <br> (21) 99555-0092 <br></mark>
+          E-mail: del06.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/CBC4unuUXwrXdGBp9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF Angra dos Reis</h2>
+          Endereço: BR 101,Km 473, Angra dos Reis/RJ - 23900-000 <br>
+          <mark>Telefone: (21) 3503-2332 <br></mark>
+          Email: del03.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/kCWbhSbG17tyvpRy7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+  
+        <address>
+          <h2 class="prf">PRF Barra Mansa</h2>
+          Endereço: BR 116,Km 287, Barra Mansa/RJ - CEP: 27.365-003 <br>
+          <mark>Telefone: (24)99968-1503 <br> (21) 97214-8658 <br> (21) 3503-2372 <br></mark>
+          E-mail: del07.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/N7yY1NkhxKo7LYRT7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Lagamar</h2>
+          Endereço: BR 101, Km 078 Campos dos Goytacazes/RJ - 28.115-000 <br>
+          <mark>Telefone: (21) 3503-2382 <br> (21) 99647-4641 <br></mark>
+          Email: del08.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/XTnJH8xDKceiRhkY9"  target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Casimiro de Abreu</h2>
+          Endereço: BR 101,Km 203, Casimiro de Abreu/RJ  - 28.860-000 <br>
+          <mark>Telefone: (21) 3503-2324 <br></mark>
+          Email: del02.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/AHJXxCiCJvRwduLm7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Duque de Caxias (UOP Pedágio Xerém)</h2>
+          Endereço: Rodovia Washington Luiz (BR-040), Km 104, Xerém - 25.265-008 <br>
+          <mark>Telefone: (21) 3503-2311 <br></mark>
+          Email: del01.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/egY6Q2DyZQbNS4kD9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Itaguaí</h2>
+          Endereço: BR 101,Km 399, Itaguaí/RJ - 23.812-101 <br>
+          <mark>Telefone: (21) 3503-2330 <br></mark>
+          Email: del03.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/PhdCTzXa7TvBFsvz7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Itaperuna</h2>
+          Endereço: BR 356, km 50, Trevo de Bom Jesus, Itaperuna/RJ - 28300-000 <br>
+          <mark>Telefone: (21) 3503-2383 <br></mark>
+          <a href="https://goo.gl/maps/4vpH8dYvgLz5xbTL9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+         <address>
+          <h2 class="prf">PRF Magé</h2>
+          Endereço: Rodovia Rio-Teresópolis (BR-116), km 133, Bongaba - 25.930-530 <br>
+          <mark>Telefone: (21) 3503-2342 <br></mark>
+          Email: del04.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/MErFaduXfD9Rizyb9" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Paraíba do Sul</h2>
+          Endereço: BR 393,Km 182 Paraíba do Sul/RJ - 25.850-000 <br>
+          <mark>Telefone: (21) 3503-2351 <br></mark>
+          Email: del05.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/TE6hgu1RtpurRdJ2A" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Seropédica</h2>
+          Endereço: Rodovia Presidente Dutra (BR-116), km 207, Seropédica - 23.893-690 <br>
+          <mark>Telefone: (21) 3503-2313 <br></mark>
+          Email: del01.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/d56WTVDMFtJRsSHp8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Três Rios</h2>
+          Endereço: BR-040, Km 022, Três Rios/RJ - 25.821-490 <br>
+          <mark>Telefone: (21) 3503-2361 <br> (21) 99571-1901 <br></mark>
+          Email: del06.rj@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yjmUJdQWr35qgvTK7" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="rio-grande-do-norte">
+       <h1 class="estados">Rio Grande do Norte</h1>
+      <address>
+        <h2 class="prf">Superintendência</h2>
+        Endereço: Avenida Nascimento de Castro, 1540 - Lagoa Nova - Natal/RN - CEP: 59056-450. <br>
+        <mark>Telefone: (84) 3215-1500 <br>  WhatsApp: (84) 3215-1500 <br></mark>
+        E-mail: atendimento.rn@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ceKHF36MoqH8ihHU9" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF Macaíba</h2>
+        Endereço: BR 304, Km 295, s/n - Ferreiro Torto - Macaíba/RN - CEP: 59280-000. <br>
+        <mark>Telefones: (84) 3271-1517/1519 <br> (84) 3215-1512 <br></mark>
+        E-mail: del01.rn@prf.gov.br <br>
+        <a href="https://goo.gl/maps/oNCmSUZSkq7wZuHD9" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF São José de Mipibú</h2>
+        Endereço: BR 101, Km 118 - São José de Mipibu/RN - 59162-000 <br>
+        <mark>Telefone: (84) 3215-1511 <br></mark>
+        E-mail: del01.rn@prf.gov.br <br>
+        <a href="https://goo.gl/maps/y2aE6h8UddLvRUCD6" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+        <address>
+          <h2 class="prf">PRF Lajes</h2>
+          Endereço: BR 304, Km 193, Lajes/RN - CEP: 59535-970. <br>
+          <mark>Telefone: (84) 3215-1513 <br></mark>
+          E-mail: del01.rn@prf.gov.br <br>
+          <a href="https://goo.gl/maps/qw9xPg9Vg8LsmXY77" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Gonçalo do Amarante</h2>
+          Endereço: BR 406, Km167, s/n - São Gonçalo do Amarante/RN - CEP: 59290-000. <br>
+          <mark>Telefones: (84) 3215-1520 <br> (84) 3215-1524 <br> (84) 3215-1521 <br></mark>
+          E-mail: del02.rn@prf.gov.br <br>
+          <a href="https://goo.gl/maps/29JpNTDv9YAE8noF8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Caicó</h2>
+          Endereço: BR 427, Km 107, s/n, Zona Rural - Caicó/RN - CEP: 59300-00 <br>
+          <mark>Telefones: (84) 3215-1530 <br> (84) 3215-1533  <br> (84) 3215-1531 <br></mark>
+          E-mail: del03.rn@prf.gov.br <br>
+          <a href="https://goo.gl/maps/WGpn9k34m9sYTsrK7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Campo Redondo</h2>
+          Endereço: BR 226, Km 137, Campo Redondo/RN - CEP: 59230-970 <br>
+          <mark>Telefone: (84) 3215-1532 <br></mark>
+          E-mail: del03.rn@prf.gov.br <br>
+          <a href="https://goo.gl/maps/YHagwfymXUwSEVBb7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">Delegacia de Mossoró</h2>
+          Endereço: BR 110, Km 48, s/n, Alto de São Manoel - Mossoró/RN - CEP: 59625-300 <br>
+          <mark>Telefones: (84) 3215-1540 <br></mark>
+          E-mail: del04.rn@prf.gov.br <br> 
+          Horário de atendimento: 10h00 às 12h00 e 14h00 às 17h00 de segunda a sexta-feira <br>
+          <a href="https://goo.gl/maps/di8KnBHkrxv7oEA59" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Mossoró (UOP01)</h2>
+          Endereço: BR 304, Km 48, Sumaré - Mossoró/RN - CEP: 59600-000. <br>
+          <mark>Telefone: (84) 3215-1541 <br> (84) 3215-1542 <br></mark>
+          E-mail: del04.rn@prf.gov.br <br>
+          <a href="https://goo.gl/maps/qC11DhuxYfuminWNA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="rio-grande-do-sul">
+        <h1 class="estados">Rio Grande do Sul</h1>
+        <address>
+          <h2 class="prf">Superintendência</h2>
+          Endereço: Av. Dos Estados, 1545, Porto Alegre/RS - CEP: 90200-001 <br>
+          <mark>Telefone: (51) 3375-9700 <br> (51) 99275-0604 WhatsApp <br></mark>
+          E-mail: gab.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/cQQ1vBstDJZdGNwv5" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Porto Alegre</h2>
+          Endereço: BR 290 km 91,6 - Bairro Anchieta - Porto Alegre/RS - 90250-710 <br>
+          <mark>Telefone: (51) 3375 9728 <br> (51) 3371-2093 <br></mark>
+          Email: del01p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/vdMmRhadr7qxb6418" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF São Leopoldo</h2>
+          Endereço: BR 116,Km 244  - Bairro Scharlau - São Leopoldo/RS - 93125-340 <br>
+          <mark>Telefone: (51) 3568 2920 <br></mark>
+          Email: del01p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/XsomN8sZwZ9rw8qy7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Eldorado do Sul</h2>
+          Endereço: BR 290, Km 111, Industrial, Eldorado do Sul / RS - CEP 92990-000 <br>
+          <mark>
+            Telefone: (51) 3375-9717 <br> (51) 3481-4125 <br> (51) 3375-9715 <br>
+            (51) 3481-3286 <br> (51) 99238-7541 <br>
+          </mark>
+          E-mail: del02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/Uq9houUgkqEHyqeV7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Osório</h2>
+          Endereço: BR 101, km 83, Osório/ RS - CEP 95520-000 <br>
+          <mark>Telefone: (51) 3663-4141 <br> (51) 3663-1035 <br> (51) 99239-2572 <br></mark>
+          E-mail: del03.rs@prf.gov.br <br>
+         <a href="https://goo.gl/maps/dVcZsDrZKBxidEVb7"target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Torres</h2>
+          Endereço: BR 101, km 0 - Torres/RS - CEP 95560-000 <br>
+          <mark>Telefone: (51) 3605-2500 <br>(51) 99241-2240 <br></mark>
+          Email: del03.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/t9msTTf7aLEmTvLY8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Lajeado</h2>
+          Endereço: BR 386, km 342, Lajeado/ RS - CEP 95908-650 <br>
+          <mark>Telefone: (51) 3748-9605 <br> (51) 3748-9548 <br></mark>
+          E-mail: del04.rs@prf.gov.br <br> del04p01.rs@prf.gov.br <br> 
+          <a href="https://goo.gl/maps/KA4ZPpnRXzgYdvrb7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address> 
+          <h2 class="prf">PRF Soledade</h2>
+          Endereço: BR 386, km 250 Soledade, RS CEP: 99300-000 <br>
+          <mark>Telefone: (54) 3381 2900 <br> (54) 99106 4186 <br></mark>
+          Email: del04p04.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/uT6CxUqnckLLvW1J8" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Caxias do Sul</h2>
+          Endereço: BR 116 km 147 nº16301, Bairro De lazzer, Caxias do Sul – CEP 95059-520 <br>
+          <mark>Telefone: (51) 99376-3084 <br> (54)3229-2185 <br></mark>
+          e-mail: del05.rs@prf.gov.br <br> del05p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yJ1EaNJU6WyG8fRXA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Nova Petrópolis</h2>
+          Endereço: BR 116,Km 184, Bairro Bavária, Nova Petrópolis/RS - 95150-000 <br>
+          <mark>Telefone: (65) 3281-1098 <br></mark>
+          Email: del05p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/sJhcTkoQfbds3N3p7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Vacaria</h2>
+          Endereço: BR 116, km 36, Bairro Industrial, Vacaria/RS - 95200-000 <br>
+          <mark>Telefone: (54) 3232-2929 <br></mark>
+          Email: del05p03.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/vV2Jkdb4kBiz1sSV6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Arroio Grande</h2>
+          Endereço: BR 116,Km 610,9 Arroio Grande/RS - 96330-000 <br>
+          <mark>Telefone: (53)3262-1522 <br></mark>
+          Email: del07p03.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/MRgAjXJ3RA17Hsvw6" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Bagé</h2>
+          Endereço: BR 293,Km 173 Bagé/RS - 96400-000 <br>
+          <mark>Telefone: (53)3247-3924 <br> (53) 3247-1057 <br></mark>
+          Email: del11p04.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/YhQLaKK1isC45XEW9" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Caçapava do Sul</h2>
+          Endereço: BR 392,Km 257 Caçapava do Sul/RS - 96570-000 <br>
+          <mark>Telefone: (55)3281-4138 <br></mark>
+          Email: del09p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yopxBhFYwA1XS3z59" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Cruz Alta</h2>
+          Endereço: BR 158,Km 198 Cruz Alta/RS - 98045-030 <br>
+          <mark>Telefone: (55) 3322-6848 <br></mark>
+          Email: del10p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/yWsCH8EbFNjTiHC9A" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address> 
+          <h2 class="prf">PRF Santana do Livramente</h2>
+          Endereço: Rodovia BR-293 Bagé <br>
+          <mark>Telefone: (53) 3247-3924 <br></mark>
+          <a href="https://goo.gl/maps/tJniGyDZduDmaQsBA" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+        <address>
+          <h2 class="prf">PRF Erechim</h2>
+          Endereço: BR 153,Km 038 Erechim/RS - 99700-000 <br>
+          <mark>Telefone: (54)3504-6656 <br></mark>
+          Email: del08p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/xvE8SpYA15651jNP7" target="_blank">Clique aqui para ver no mapa</a>
+        </address>
+         <address>
+          <h2 class="prf">PRF Ijuí</h2>
+          Endereço: BR 285,Km 462 Ijuí/RS - 98700-000 <br>
+          <mark>Telefone: (55)3332-8244 <br> </mark>
+          Email: del10p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/TpqZWjT97Rsf1eBg8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Lagoa Vermelha</h2>
+          Endereço: BR 285,Km 197 Lagoa Vermelha/RS - 95300-000 <br>
+          <mark>Telefone: (54)3358-2118 <br> (54)3358-2722 <br></mark>
+          Email: del06p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/3a6rBS3e6xJ2LrhV8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Passo Fundo</h2>
+          Endereço: BR 285,Km 291 Passo Fundo/RS - 99042-800 <br>
+          <mark>Telefone: (54)3313-2225 <br></mark>
+          Email: del08p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/CpHkoYz9eqQc2baX8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Pelotas</h2>
+          Endereço: BR 116 km 509 Pelotas/RS - 96070-560 <br>
+          <mark>Telefone: (53) 327 37000 <br> (53) 99101 3728 <br></mark>
+          Email: del07p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/GnGxR1qsJKJJypd26" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Rio Grande</h2>
+          Endereço: BR 392,Km 028,5 Rio Grande/RS - 96200-970 <br>
+          <mark>Telefone: (53)3239-1066 <br> (53) 3239-1635 <br></mark>
+          Email: del07p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/oK1Dmsk6i4BH36wV6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Rosário do Sul</h2>
+          Endereço: BR 290,Km 479 Rosário do Sul/RS - 97590-000 <br>
+          <mark>Telefone: (55)3231-2611 <br></mark>
+          Email: del11p03.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/WoQz8qGQsv4GrMi27" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Santa Vitória do Palmar</h2>
+          Endereço: BR 471,Km 631,2 Santa Vitória do Palmar/RS - 96230-000 <br>
+          <mark>Telefone: (53)3263-1122 <br> (53)3263-3961 <br></mark>
+          Email: del07p05.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/NX5UztCVPzmmpyTb8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Santiago</h2>
+          Endereço: BR 287,Km 393 Santiago/RS - 97700-000 <br>
+          <mark>Telefone: (55) 3251-2639 <br></mark>
+          Email: del12p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/4BcL55fVwaWTs8Pu6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Santo Antônio da Patrulha</h2>
+          Endereço: BR 290,Km 019,1 Santo Antônio da Patrulha/RS - 95000-000 <br>
+          <mark>Telefone: (51)3501-6233 <br> (51)8403-3664 <br></mark>
+          Email: del03p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/rux16BdnyXUVANAv5" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF São Borja</h2>
+          Endereço: BR 285,Km 673 São Borja/RS - 97670-000 <br>
+          <mark>Telefone: (55)3431-2023 <br></mark>
+          Email: del12p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/CERcSpdRywqHq1i48" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF São Gabriel</h2>
+          Endereço: BR 290,Km 417 São Gabriel/RS - 97300-000 <br>
+          <mark>Telefone: (55)3232-5404 <br></mark>
+          Email: del09p03.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/scvKdjiEzMW34Qto6" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+         <address>
+          <h2 class="prf">PRF Tabaí</h2>
+          Endereço: BR 386, km 386 Tabaí, RS CEP: 95863-000 <br>
+          <mark>Telefone: (51) 3614 0003 <br> (51) 99117 2099 <br></mark>
+          Email: del04p02.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/acukKoRUmqGKcTUE8" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+  
+         <address>
+          <h2 class="prf">Delegacia Uruguaiana</h2>
+          Endereço: BR 290,Km 713 Uruguaiana/RS - 97500-000 <br>
+          <mark>Telefone: (55) 3411-0449 <br></mark>
+          Email: del13p01.rs@prf.gov.br <br>
+          <a href="https://goo.gl/maps/6kK93K9awv1PpDjMA" target="_blank">Clique aqui para ver no mapa</a>
+         </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="rondonia">
+       <h1 class="estados">Rondônia</h1>
+       <address>
+        <h2 class="prf">Superintendência</h2>
+        Endereço: Avenida Pinheiro Machado,1276, Porto Velho (RO), CEP 76801-128 <br>
+        <mark>Telefone: (69) 3211-7800 <br></mark>
+        <a href="https://goo.gl/maps/qfNrR2NZZh1LEw6L7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Porto Velho</h2>
+        Endereço: BR 364 km 698, Porto Velho (RO), CEP 76800-000 <br>
+        <mark>Telefones: (69) 3211-7894 <br> (69) 3211-7866  <br> (69) 3211-7869 <br></mark>
+        E-mail: del01.ro@prf.gov.br <br> del01.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/R2VRhLMoJhdQUxQU8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Guajará-Mirim</h2>
+        Endereço: BR 425, Km 118, Guajará-Mirim (RO), CEP 76850-000 <br>
+        <mark>Telefone: (69) 3211-7833 <br></mark>
+        E-mail: del01.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/TzrYktXPF6xoDtrF6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Ji-Paraná</h2>
+        Endereço: BR 364 km 352, Zona Rural, Ji-Paraná (RO), CEP 76.900-970 <br>
+        <mark>Telefones: (69) 3211 - 7895 <br> (69) 3421-0437 <br></mark>
+        E-mail: del02.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/qX2WsiRiyFV8p3jx8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Pimenta Bueno</h2>
+        Endereço: BR 364, Km 208, Pimenta Bueno (RO), CEP 76970-000 <br>
+        <mark>Telefone: (69) 3211-7864 <br>(69) 3211-7868 <br></mark>
+        E-mail: del02.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/XfyHL8UtKgTGXWzj7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Ariquemes</h2>
+        Endereço: BR 364 km 520, Ariquemes (RO), CEP 76870-000 <br>
+        <mark>Telefones: (69) 3211-7889 <br> (69) 3535-2451 <br></mark>
+        E-mail: del03.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/EGzHGrip4Zs8xtNVA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Jaru</h2>
+        Endereço: BR 364, Km 432,9, Jaru (RO), CEP: 76890-000 <br>
+        <mark>Telefone: (69) 3211-7854 <br> (69) 3521-1266 <br></mark>
+        E-mail: del03.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/hRsybwgJSrbS1NFv8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Itapuã do Oeste</h2>
+        Endereço: BR 364, Km 600,2. Itapuã do Oeste (RO) Cep: 76861-000 <br>
+        <mark>Telefone: (69) 3211-7856 <br></mark>
+        E-mail: del03.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/oFbsJGuwtLk8JWrcA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Vilhena</h2>
+        Endereço: BR 364 km 01, Zona Rural, Vilhena (RO), CEP 76988-899 <br>
+        <mark>Telefones: (69) 3211-7829 <br>(69) 3211-7893 <br></mark>
+        E-mail: del04.ro@prf.gov.br <br>
+        <a href="https://goo.gl/maps/qLXfPESVPFVCU5Dj6" target="_blank">Clique aqui para ver no mapa</a>
+     </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="roraima">
+       <h1 class="estados">Roraima</h1>
+       <address>
+        <h2 class="prf">Superintendência</h2>
+        Endereço: Rua Professor Diomedes Souto Maior, n° 764, São Vicente, Boa Vista/RR - 69303-450 <br>
+        <mark>Telefone: (95) 3198-3450 <br> (95) 3198-3463 <br></mark>
+        E-mail: sprf.rr@prf.gov.br <br> del01.rr@prf.gov.br <br>
+        <a href="https://goo.gl/maps/AejYPqxDiYU3tqg19" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="santa-catarina">
+       <h1 class="estados">Santa Catarina</h1>
+       <address>
+        <h2 class="prf">Superintendência em Santa Catarina</h2>
+        Endereço: Rua Álvaro Mullen da Silveira,104, Florianópolis/SC - 88020-180 <br>
+        <mark>Telefone: (48) 3251-3200 <br></mark>
+        E-mail: sup.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/rzc68ng9hooPksak8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">Delegacia de São José</h2>
+        Endereço: BR 101, km 204 - São José <br>
+        <mark>Telefone: (48) 3251-3340 <br></mark>
+        E-mail: del01.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/fd1xcfR7DMtAY4ox9" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Biguaçu</h2>
+        Endereço: BR 101, km 190 – CEP 88160-000 <br>
+        <mark>Telefone: celular (48) 98814-8259 <br> (48) 3251-3352/3351 <br></mark>
+        Email: del01p01.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/3aEodj3FBirZfbhV7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Palhoça</h2>
+        Endereço: BR 101, km 220 – CEP 88130-000 <br>
+        <mark>Telefone: celular (48) 98815-1281 <br> (48) 3251-3353 <br></mark>
+        Email: del01p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/LxsiuFTd8E55qeGu9" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Rancho Queimado</h2>
+        Endereço: BR 282, km 61,6 – CEP 88470-000 <br>
+        <mark>Telefone: celular (48) 98816-0343 <br> (48) 3251-3284 <br></mark>
+        Email: del01p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/N6xGTqGaKPs5ssQf8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Tubarão</h2>
+        Endereço: BR 101, km 336 - Tubarão <br>
+        <mark>Telefone: (48) 98818-5551 <br>(48) 3251-3382 <br>  (48) 3251-3396 <br></mark>
+        E-mail: del02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/Ap1EDfsHekYSHrkeA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Araranguá</h2>
+        Endereço: BR 101, km 422 – CEP 88904-020 <br>
+        <mark>Telefone: (48) 98818-5830 <br> (48) 3251-3272 <br></mark>
+        Email: del02p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/XBHavdLruKWXarDz8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Paulo Lopes</h2>
+        Endereço: BR 101, km 266 – CEP 88490-000 <br>
+        <mark>Telefone: celular (48) 98816-4910 <br> (48) 3251-3328 <br></mark>
+        Email: del02p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/RbXio9e5FowXTyCp8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Joinville</h2>
+        Endereço: BR 101, km 39 - Joinville <br>
+        <mark>Telefone: (47) 3208-0280/0281 <br></mark>
+        E-mail: del03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/9hXYL25vW3xTMHWS8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Barra Velha</h2>
+        Endereço: BR 101, km 81,6 – CEP 88390-000 <br>
+        <mark>Telefone: celular (47) 98915-7390 <br> (47) 3208-0284/0285 <br></mark>
+        Email: del03p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/3WQZ1qe1W3PSmGSs7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Guaramirim</h2>
+        Endereço: BR 280, km 54,7 – CEP 89270-000 <br>
+        <mark>Telefone: celular (47) 98916-2841 <br> (47) 3208-0286/0287 <br></mark>
+        Email: del03p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/1E8L3bZS9KUG2RDA8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Itajaí</h2>
+        Endereço: Rua Blumenau, 1500 bairro Barra do Rio - Itajaí <br>
+        <mark>Telefone: (47) 3208-0248/0249 <br> (47) 3208-0240/0241 <br> (47) 98916-6652 <br></mark>
+        E-mail: del04.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/py9pKSdkUwH1pfG98" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Blumenau</h2>
+        Endereço: BR 470, km 53,8 – CEP 89160-000 <br>
+        <mark>Telefone: celular (47) 98916-6454 <br> (47) 3208-0242/0243 <br></mark>
+        Email: del04p01.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/XPSe6ga3Pdqidw1W7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Itapema</h2>
+        Endereço: BR 101, km 143 – CEP 88220-000 <br>
+        <mark>Telefone: celular (47) 98916-6514 <br> (47) 3208-0246/0247 <br></mark>
+        Email: del04p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/sDM56eXiFr8r9Bxr6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Rio do Sul</h2>
+        Endereço: BR 470, km 135 – CEP 89058-020 <br>
+        <mark>Telefone: (47) 98916-6475 <br>(47) 3208-0244/0245 <br></mark>
+        Email: del04p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/j3w2523rgNEkhsR5A" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Lages</h2>
+        Endereço: BR-475, Lages - SC <br>
+        <mark>
+          Telefone: (48) 3251-3399 <br>(49) 2102-7250 <br> (49) 2102-7251 <br>
+          (49) 98818-7190 <br> (49) 2102-7252 <br> (49) 2102-7253 <br>
+        </mark>
+        E-mail: del05.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/FGAMEAKMbSxZ1gBQ8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Capão Alto</h2>
+        Endereço: BR 116, km 279 – CEP 88500-000 <br>
+        <mark>Telefone: celular (49) 98819-0285 <br> (49) 2102-7254 <br> (49) 2102-7255 <br></mark>
+        Email: del05p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/MBh13z62np8Saf9q7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Ponte Alta</h2>
+        Endereço: BR 116, km 200 – CEP 88550-000 <br>
+        <mark>
+          Telefone: celular (49) 98819-1602 <br> (49) 2102-7256 <br> (49) 2102-7257 <br>
+          Email: del05p03.sc@prf.gov.br <br>
+        </mark>
+        <a href="https://goo.gl/maps/jpKvCzBfAYcQNVYS8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">Delegacia de Mafra</h2>
+        Endereço: Rua Dom Pedro II, 201, bairro Vila Clementina - Mafra <br>
+        <mark>Telefone: (48) 3251-3389 <br>(47) 3208-0260/0261 <br></mark>
+        E-mail: del06.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ig1ucdEAXo1uH6nJ8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Canoinhas</h2>
+        Endereço: BR 280, km 243,5 – CEP 89460-000 <br>
+        <mark>Telefone: celular (47) 98916-6772 <br> (47) 3208-0266/0267 <br></mark>
+        Email: del06p04.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/uKwW2Eygt9TCGmnf8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Mafra</h2>
+        Endereço: BR 116, km 1,0 – CEP 89300-000 <br>
+        <mark>Telefone: celular (47) 98916-6694 <br> (47) 3208-0262/0263 <br></mark>
+        Email: del06p01.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/YUwKpkZnEDEVb4HH6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Santa Cecília</h2>
+        Endereço: BR 116, km 119,5 – CEP 89540-000 <br>
+        <mark>Telefone: celular (49) 98819-7207 <br> (49) 2102-7260 <br> (49) 2102-7261 <br></mark>
+        Email: del06p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/vnLn5yyZBYgQHe91A" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Chapecó</h2>
+        Endereço: BR 282 km 535, Chapecó <br>
+        <mark>Telefone: (49) 2102-7280 <br> (49) 2102-7280 <br></mark>
+        E-mail: del07.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/oGugRyNZdYwDREcA7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Água Doce</h2>
+        Endereço: BR 153, km 10,8 – CEP 89654-000 <br>
+        <mark>Telefone: (49) 98825-5815 <br> (49) 2102-7279 <br> (49) 2102-7241 <br></mark>
+        Email: del07p04.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ZFmnwCt77KUkQFXF9" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Campos Novos</h2>
+        Endereço: BR 282, km 351,9 – CEP 89625-000 <br>
+        <mark>Telefone: (49) 98819-7980 <br> (49) 2102-7273 <br> (49) 2102-7274 <br></mark>
+        Email: del07p01.sc@dprrf.gov.br <br>
+        <a href="https://goo.gl/maps/RNaJXywWAuP9rSqW7" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Concórdia</h2>
+        Endereço: BR 153, km 92,2 – CEP 89700-000 <br>
+        <mark>Telefone: (49) 98825-4527 <br> (49) 2102-7277 <br> (49) 2102-7278 <br></mark>
+        Email: del07p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/YJVEvxpzCKHAjrrP8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Guaraciaba</h2>
+        Endereço: BR 163, km 80 – CEP 89920-001 <br>
+        <mark>Telefone: (47) 98826-5483 <br> (49) 2102-7286 <br> (49) 2102-7287 <br></mark>
+        Email: del08p03.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/q25DkZVkhMuBuiRv5" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Joaçaba</h2>
+        Endereço: BR 282 km 391 - Joaçaba, SC, 89600-000<br>
+        <mark>Telefone: (49) 98819-8948 <br> (49) 2102-7277 <br></mark>
+        <a href="https://goo.gl/maps/NQ7geVWPybdYrWdo6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Maravilha</h2>
+        Endereço: BR 282, Km 606,1 Maravilha/SC - 89874-000 <br>
+        <mark>Telefones: (49) 98826-4881 <br> (49) 2102-7284 <br> (49) 2102-7285 <br></mark>
+        Email: del08p02.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/nsN3hmvRFgSPUPRJ9" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Xanxerê</h2>
+        Endereço: BR 282, Km 508,3 Xanxerê/SC - 89820-000 <br>
+        <mark>Telefones: (49) 98826-0569 <br> (49) 2102-7282 <br> (49) 2102-7283 <br></mark>
+        Email: del08p01.sc@prf.gov.br <br>
+        <a href="https://goo.gl/maps/3BYTGZGrKq9XJiPw8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+     </section>
+     <br>
+     <br>
+     <hr>
+     <hr>
+     <br>
+     <br>
+     <section id="sao-paulo">
+       <h1 class="estados">São Paulo</h1>
+       <address>
+         <h2 class="prf">Superintendência</h2>
+         Endereço: Rua Ciro Soares de Almeida,150, Jd Andaraí, São Paulo/SP - 02167-000 <br>
+         <mark>Telefone: (11) 2795-2300 <br></mark>
+         E-mail: atendimento.sp@prf.gov.br <br>
+         <a href="https://goo.gl/maps/7h3A6YQncgQqE6R67" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">Delegacia em Guarulhos</h2>
+        Endereço: Av. Presidente. Dr. Tancredo A. Neves, 529 – Macedo – Guarulhos/SP <br>
+        <mark>Telefones: (11) 2440-6503 <br> (11) 2440-0132 <br></mark>
+        E-mail: del01.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/vjefTt9ap88xfMmz5" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Guarulhos</h2>
+        Endereço: BR 116, Km 208,8 Norte (decrescente), Guarulhos/SP - CEP 71760-000 <br>
+        <mark>Telefone: (11) 2480-4290 <br></mark>
+        Email: del01p01.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/41BUnQ27Cdvfrxcs5" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF São José dos Campos</h2>
+        Endereço: BR 116, Rodovia Presidente Dutra, KM 156, São José dos Campos/SP, CEP 12240420 <br>
+        <mark>Telefones: (12) 3931-7088 <br> (12) 3931-7088 <br> (12) 3933-7885 <br> (12) 3931-7476 <br></mark>
+        E-mail: del02.sp@prf.gov.br <br> del02p01.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/vUe3R5TXDHS6sujs5" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Atibaia</h2>
+        Endereço: Rodovia Fernão Dias, Km 47 – Bairro do Rosário – Atibaia/SP <br>
+        <mark>
+          Telefones: (11) 4412-3116 <br> (11) 4412-2055 <br>
+           (11) 4412-2577 <br> (11) 4418-3702 <br>
+        </mark>
+        E-mail: del03.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/QH8Fsxe6tpUfLDFT6" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Itapecerica da Serra</h2>
+        Endereço: BR 116, Régis Bittencourt, KM 287, Itapecerica da Serra/SP <br>
+        <mark>Telefones: (11) 4666-2497 <br>(11) 4666-2494 <br> (11) 4666-4103 <br> (11) 4165-4068 <br></mark>
+        E-mail: del04.sp@prf.gov.br <br>
+        <a href="https://g.page/prf_sp?share" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Registro</h2>
+        Endereço: BR 116,Km 439 Registro/SP - 11900-000 <br>
+        <mark>Telefone: (13) 3821-1819 <br> (13) 99186-9128 <br>   (13) 3821-7733 <br> (13) 99657-7825 </mark>(WhatsApp) <br>
+        Email: del05p01.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/ZFUiXYYBn1xcWXBs8" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Barra do Turvo</h2>
+        Endereço: BR 116, Km 525, Barra do Turvo/SP - 11955-000 <br>
+        <mark>Telefone: (13) 99186-9477 (whatsapp) <br> (15) 5704-0557 <br></mark>
+        Email: del05p03.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/MUKbwcwdwaEztcVVA" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">Delegacia em Taubaté</h2>
+        Endereço: Av. José Bonifácio Moreira, 1711, Jardim Paulista, Taubaté/SP <br>
+        <mark>Telefones: (12) 3621-8703 <br> (12) 3621-5011 <br></mark>
+        E-mail: del06.sp@prf.gov.br <br>
+        <a href="https://g.page/PRFTaubate?share" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Caçapava</h2>
+        Endereço: BR 116,Km 126,9, Caçapava/SP - 12208-000 <br>
+        <mark>Telefone: (12) 3652-3011 <br></mark>
+        <a href="https://goo.gl/maps/RukhA1GgDcrThZMq5" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+       <address>
+        <h2 class="prf">PRF Roseira</h2>
+        Endereço: BR 116, Km 78,6, Roseira/SP - 12580-000 <br>
+        <mark>Telefone: (12)3246-1200 <br></mark>
+        Email: del06p01.sp@prf.gov.br <br>
+        <a href="https://goo.gl/maps/atMz7gbAMoQcWuV98" target="_blank">Clique aqui para ver no mapa</a>
+       </address>
+   <address>
+    <h2 class="prf">PRF Ubatuba</h2>
+    Endereço: BR 101, Km 031, Ubatuba/SP - 11680-000 <br>
+    <mark>Telefone: (12) 3845-1226 <br></mark>
+    Email: del06p02.sp@prf.gov.br <br>
+    <a href="https://goo.gl/maps/2PPHDheZWqovwyiY8" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+   <address>
+    <h2 class="prf">PRF Marília</h2>
+    Endereço: BR 153 - Rodovia Transbrasiliana, Km 259, Vila Jockey Club, Marília/SP <br>
+    <mark>Telefones: (14) 3451-1044 <br>(14) 3417-2499 <br> (14)3451-4733 <br></mark>
+    <a href="https://goo.gl/maps/823seoqgkXtbPqPZ6" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+   <address>
+    <h2 class="prf">PRF Guaiçara</h2>
+    Endereço: BR 153, Km 174, Guaiçara/SP - 16430-000 <br>
+    <mark>Telefone: (14) 3547-1344 <br></mark>
+    Email: del07p01.sp@prf.gov.br <br>
+    <a href="https://goo.gl/maps/wUxieBwunVrAzVCp6" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+   <address>
+    <h2 class="prf">PRF Ourinhos</h2>
+    Endereço: BR 153,Km 345,3 Ourinhos/SP - 19914-000 <br>
+    <mark>Telefone: (14)3324-5965 <br> (14)3324-9427 <br></mark>
+    Email: del10p03.sp@prf.gov.br <br>
+    <a href="https://goo.gl/maps/8tVTiWUggnj9yT4b7" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+   <address>
+    <h2 class="prf">PRF Aparecida</h2>
+    Endereço: BR 116,Km 071 Aparecida/SP - 12570-000 <br>
+    <mark>Telefone: (12)3105-4043/191 <br></mark>
+    Email: del08p02.sp@prf.gov.br <br>
+    <a href="https://goo.gl/maps/trCgvHqXQ222ryS47" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+   <address>
+    <h2 class="prf">PRF Lavrinhas</h2>
+    Endereço: BR 116,Km 018 Lavrinhas/SP - 12760-000 <br>
+    <mark>Telefone: (12) 3101-2815 <br></mark>
+    Email: del08p01.sp@prf.gov.br <br>
+    <a href="https://goo.gl/maps/jAhFxFaQRxmjetQ67" target="_blank">Clique aqui para ver no mapa</a>
+   </address>
+    <address>
+      <h2 class="prf">PRF São José do Rio Preto</h2>
+      Endereço: BR 153, Km 69,7, São José do Rio Preto/SP - 15053-000 <br>
+      <mark>Telefone: (17) 3224-7964 <br></mark>
+      Email: del09p02.sp@prf.gov.br <br>
+      <a href="https://goo.gl/maps/NLYBh5bvTn2YuvCs9" target="_blank">Clique aqui para ver no mapa</a>
+    </address>
+    <address>
+      <h2 class="prf">PRF São Vicente</h2>
+      Endereço: Rodovia SP 160, Km 61,500, S/n, Rod. dos Imigrantes - Cidade Náutica, São Vicente - SP,  11350-000 <br>
+      <mark>Telefone: (18) 3364-0244 <br></mark>
+      <a href="https://goo.gl/maps/MeSgg4Fvw9KYLmW87" target="_blank">Clique aqui para ver no mapa</a>
+    </address>
+     </section>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <section id="sergipe">
+      <h1 class="estados">Sergipe</h1>
+      <address>
+        <h1 class="prf">Superintendência em Sergipe</h1>
+        Endereço: Avenida Maranhão, 1890 - Aracaju/SE – CEP: 49.087-420 <br>
+        <mark>Telefone: (79) 2107-3900 <br> (79) 2107-3980 <br> (79)2107-3982 <br> (79)3179-3151 <br></mark>
+        E-mail: atendimento.se@prf.gov.br <br>
+        <a href="https://goo.gl/maps/CFLLhBjsSjy65w3Z6" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF Itabaiana</h2>
+        Endereço: BR 235,Km 051 Itabaiana/SE - 49500-000 <br>
+        <mark>Telefone: (79)2107-3981 <br> (79) 3432-1000 <br></mark>
+        Email: del01p02.se@prf.gov.br <br> 
+        <a href="https://goo.gl/maps/sJ7knEYU2ZfshApT7" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF São Cristovão</h2>
+        Endereço: BR-101, km 105 <br>
+        <mark>Telefones: (79) 2107-3980 <br> (79)2107-3971 <br> (79)3261-1495 <br></mark>
+        E-mail: del02.se@prf.gov.br <br>
+        <a href="https://goo.gl/maps/8mKwNBfjGSWwRe7v7" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF Cristinápolis</h2>
+        Endereço: BR 101,Km 201 Cristinápolis/SE - 49270000 -000 <br>
+        <mark>Telefone: (79)2107-3973 <br> (79)3542-1267 <br></mark>
+        Email: del02p03.se@prf.gov.br <br>
+        <a href="https://goo.gl/maps/Nf4WT2boVK9rNxEj7" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      <address>
+        <h2 class="prf">PRF Malhada dos Bois</h2>
+        Endereço: BR 101,Km 023 Malhada dos Bois/SE - 49940-000 <br>
+        <mark>Telefone: (79)2107-3972 <br> (79)3365-1300 <br></mark>
+        Email: del01p02.se@prf.gov.br <br>
+        <a href="https://goo.gl/maps/KhhmchTrptr2mJ6L6" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+    </section>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <section id="tocantins">
+      <h1 class="estados">Tocantins</h1>
+      <address>
+        <h2 class="prf">Superintendência</h2>
+        Endereço: ANO 20, Rua NO 13, CONJ. 02, 05 B, Palmas/TO - 77001-133 <br>
+        <mark>Telefone: (63) 3215-9700 <br></mark>
+        Email: atendimento.to@prf.gov.br <br> del01.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/mrJQZVo9TZzFLmPm7" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      
+      
+      
+      <address>
+        <h2 class="prf">PRF Paraíso do Tocantins</h2>
+        Endereço: BR 153, Km496 Paraíso do Tocantis/TO-77400-000  <br>
+        <mark>Telefones: (63) 3215-9762 <br> (63) 99947-9921 <br></mark>
+        E-mail: dist02p02.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/CEYd71unPWw2pc1EA" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      
+      
+      
+      <address>
+        <h2 class="prf">PRF Gurupi</h2>
+        Endereço: BR 153,Km 664 Gurupi/TO - 77402-220 <br>
+        <mark>Telefone: (63) 3215-9761 <br> (63) 99997-1207 <br></mark>
+        Email: dist02p01.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/6YXD54TbLWbdkpoaA" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      
+      
+      
+      <address>
+        <h2 class="prf">PRF Araguaína</h2>
+        Endereço: BR 153, KM 142,8 com AV. Bernardo Sayão, Bairro JK, Araguaína/TO - CEP 77816-200 <br>
+        <mark>
+          Telefones: (63) 3215-9764 <br> (63) 98116-3900 <br>
+          (63) 98419-8392 <br> (63) 3215-5764 <br>
+        </mark>
+        Email: del02.to@prf.gov.br <br> dist02p04.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/1ZjoDb5V5ZVskj626" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+      
+      
+      
+      <address>
+        <h2 class="prf">PRF Guaraí</h2>
+        Endereço: BR 153,Km 329 Guaraí/TO - 77700-000 <br>
+        <mark>Telefones: (63) 3215-9763 <br> (63) 99952-3391 <br></mark>
+        Email: dist02p03.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/pf5Be2t9u8hUoa7JA" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+  
+      
+      <address>
+        <h2 class="prf">PRF Palmeiras do Tocantins</h2>
+        Endereço: BR 226,Km 08 Palmeiras do Tocantis/TO - 77913-000 <br>
+        <mark>Telefones: (63) 3215-9765 <br> (63) 99947-8047</mark> <br>
+        Email: dist02p05.to@prf.gov.br <br>
+        <a href="https://goo.gl/maps/pUabzcZJyWzKGKvWA" target="_blank">Clique aqui para ver no mapa</a>
+      </address>
+       
+    </section>     
+  
+    </section>
+
+    </section>
+
+        
+   
+
+                 
+      
+                    
+    
+
+
+
+  <!-- LISTA DE TEMAS  -->
+
+  <ul title="Alterar o Tema">
+    <li><input name="color" id="light" type="radio" checked=""></li>
+    <li><input name="color" id="dark" type="radio"></li>
+    <li><input name="color" id="blue" type="radio"></li>
+    <li><input name="color" id="pink" type="radio"></li>
+
+  </ul>
+
+  <!-- SEÇÃO JS  -->
+  <script src="./index.js">
+
+  </script>
+
+
+<footer>
+  <h3 id="links-uteis"></h3>
+  <nav>
+    <a href="https://translog.sistemagr.com.br/" target="_blank">Translog</a>
+    <a href="https://www.google.com.br/maps/@-20.7661703,-49.4362846,15z?hl=en&authuser=0" target="_blank">Google Maps</a>
+    <a href="https://sasweb.sascar.com.br/unificadoweb/site/login" target="_blank">SASGC Básico</a>
+    <a href="https://sicop.prf.gov.br/sicop/sinal" target="_blank">Acionamento PRF via Site</a>
+    <a href="https://www.notion.so/TREINAMENTO-SASCAR-TRANS-SAT-498aebc2dd6d4f17bcd0aa95b5ea5839" target="_blank" title="Material de treinamento SASCAR">Material de treinamento SASCAR</a>
+  </nav>
+  <h4>SASCAR - 0800 648 6004 / Whatsapp  - 4002-6004.</h4>
+  <h4>Omnlink - 0800 882 1949 / WhatsApp - 4003 6754  </h4>
+  <h4>Autotrac - 0800 605 4321 / WhatsApp - 0800 70 12345 </h4> 
+  <h4>OnixSat - 0800 400 8282 / WhatsApp - (43) 9914-9929</h4>
+  <h4>Positron - 0800 775 6001 / WhatsApp - (11) 96399-0556  </h4>
+  <h4>Sighra - (11) 3662-5450</h4>
+  <br>
+  <h4>Trans Sat (17) 3214-9333 </h4>
+  <address>R. Profa. M.nha do Nascimento Bednarski, 1110 - Res. Cidade Jardim, São José do Rio Preto - SP, 15081-020</address>
+
+</footer>
+
+
+</body>
+
+</html>
